@@ -1,9 +1,0 @@
-<AllStepParameters>
-    <StepParameter ID="Test01" Name="Demo" >
-      <ConnectionString>FDFD</ConnectionString>
-      <CommandText>demo</CommandText>
-      <Parameters>
-      <parameter Key="targeturl" Value="http://10.42.121.89:8089/admin_pm_landing_page.xhtml"/>
-     </Parameters>
-    </StepParameter>
-</AllStepParameters>

@@ -1,9 +1,0 @@
-  <AllTestCases>
-    <StepParametersFilePath>CreateLandingPageStepParameters.xml</StepParametersFilePath>
-    <UIElementsFilePath>CreateLandingPageStepUIElements.xml</UIElementsFilePath>
-    <StepAssembly>com.baidu.gameqa.wuat.steps.demo.</StepAssembly>
-    <StepGroup>CreateLandingPage</StepGroup>
-     <TestCase ID="Test01" Name="nihao">
-       <Step StepName="create" StepParameterID="Test01"/>
-    </TestCase>
-  </AllTestCases>

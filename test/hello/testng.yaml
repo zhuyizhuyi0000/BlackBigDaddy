@@ -1,7 +1,0 @@
-name: Suite
-configFailurePolicy: skip
-tests:
-  - name: Test
-    classes:
-      - baba.NewTest
-

@@ -1,9 +1,0 @@
-  <AllTestCases>
-    <StepParametersFilePath>InnerLoginStepParameters.xml</StepParametersFilePath>
-    <StepAssembly>com.baidu.gameqa.iat.steps.sso.</StepAssembly> 
-    <StepGroup>InnerLoginSteps</StepGroup>
-    <TestCase ID="innerLogin_Case01" Name="innerLogin_Case01">
-       <Step StepName="innerLogin" StepParameterID="InnerLogin_Case01_Parameters"/>
-       <Step StepName="assertResult" StepParameterID="InnerLogin_Case01_Parameters"/>
-    </TestCase>
-  </AllTestCases>
