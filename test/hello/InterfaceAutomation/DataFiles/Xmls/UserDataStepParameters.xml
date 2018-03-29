@@ -1,0 +1,11 @@
+<AllStepParameters>
+	<!-- 用户绑定邮箱数据初始化 -->
+	<StepParameter ID="UpdateUserBindEmail_Para" Name="updateUserBindEmail">
+		<ConnectionString>jdbc:mysql://10.48.16.43:4430/game</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="table" Value="user_binding_email" />
+			<parameter Key="" Value="" />
+		</Parameters>
+	</StepParameter>
+</AllStepParameters>

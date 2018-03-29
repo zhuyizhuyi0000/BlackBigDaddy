@@ -1,0 +1,51 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="GiftProduct" verbose="1">
+	<!-- 礼包单条限定条件-userLimit-[{"code":"userBindEmail"}] -->
+	<test name="UserLimit_NoBindEmail">
+		<parameter name="setUpGiftParameter" value="GiftProductData_TestCase"></parameter>
+		<parameter name="userDataParameterID" value="UserDataNoBindTestCase"></parameter>
+		<classes>
+			<class name="com.baidu.gameqa.generation.GiftCheckSteps">
+				<methods>
+					<include name=".*NoBindEmail.*"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="UserLimit_BindEmail">
+		<parameter name="setUpGiftParameter" value="GiftProductData_TestCase"></parameter>
+		<parameter name="userDataParameterID" value="UserDataBindEmailTestCase"></parameter>
+		<classes>
+			<class name="com.baidu.gameqa.generation.GiftCheckSteps">
+				<methods>
+					<include name="userBindEmail"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!-- 礼包单条限定条件-userLimit-[{"code":"userBindPhone"}] -->
+	<test name="UserLimit_NoBindPhone">
+		<parameter name="setUpGiftParameter" value="GiftUserBindPhone"></parameter>
+		<parameter name="userDataParameterID" value="UserDataNoBindTestCase"></parameter>
+		<classes>
+			<class name="com.baidu.gameqa.generation.GiftCheckSteps">
+				<methods>
+					<include name="userNoBindPhone"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="UserLimit_BindPhone">
+		<parameter name="setUpGiftParameter" value="GiftUserBindPhone"></parameter>
+		<parameter name="userDataParameterID" value="UserDataBindPhoneTestCase"></parameter>
+		<classes>
+			<class name="com.baidu.gameqa.generation.GiftCheckSteps">
+				<methods>
+					<include name="userBindPhone"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,45 @@
+  <AllTestCases>
+    <StepParametersFilePath>FF14/FF14QueryUseridStepParameters.xml</StepParametersFilePath>
+    <StepAssembly>com.baidu.gameqa.iat.steps.FF14.</StepAssembly>
+    <StepGroup>FF14QueryUseridSteps</StepGroup>
+    <TestCase ID="enQuick" Name="enQuick">
+       <Step StepName="getCaseData" StepParameterID="enQuick"/><!-- 不同用例间此参数不同 -->
+       <Step StepName="setDB" StepParameterID="deletlData"/>
+       <Step StepName="setDB" StepParameterID="insertData"/>
+       <Step StepName="doFF14QueryUserid_200" StepParameterID="ff14_query_userid"/>
+       <Step StepName="assertResult" StepParameterID="expectedResult"/>
+       <Step StepName="setDB" StepParameterID="deletlData"/>
+    </TestCase>
+    <TestCase ID="znQuick" Name="znQuick">
+       <Step StepName="getCaseData" StepParameterID="znQuick"/><!-- 不同用例间此参数不同 -->
+       <Step StepName="setDB" StepParameterID="deletlData"/>
+       <Step StepName="setDB" StepParameterID="insertData"/>
+       <Step StepName="doFF14QueryUserid_200" StepParameterID="ff14_query_userid"/>
+       <Step StepName="assertResult" StepParameterID="expectedResult"/>
+       <Step StepName="setDB" StepParameterID="deletlData"/>
+    </TestCase>
+    <TestCase ID="enPass" Name="enPass">
+       <Step StepName="getCaseData" StepParameterID="enPass"/><!-- 不同用例间此参数不同 -->
+       <Step StepName="setDB" StepParameterID="deletlData"/>
+       <Step StepName="setDB" StepParameterID="insertData"/>
+       <Step StepName="doFF14QueryUserid_200" StepParameterID="ff14_query_userid"/>
+       <Step StepName="assertResult" StepParameterID="expectedResult"/>
+       <Step StepName="setDB" StepParameterID="deletlData"/>
+    </TestCase>
+    <TestCase ID="znPass" Name="znPass">
+       <Step StepName="getCaseData" StepParameterID="znPass"/><!-- 不同用例间此参数不同 -->
+       <Step StepName="setDB" StepParameterID="deletlData"/>
+       <Step StepName="setDB" StepParameterID="insertData"/>
+       <Step StepName="doFF14QueryUserid_200" StepParameterID="ff14_query_userid"/>
+       <Step StepName="assertResult" StepParameterID="expectedResult"/>
+       <Step StepName="setDB" StepParameterID="deletlData"/>
+    </TestCase>
+    <TestCase ID="201" Name="201">
+       <Step StepName="getCaseData" StepParameterID="znPass"/><!-- 不同用例间此参数不同 -->
+       <Step StepName="setDB" StepParameterID="deletlData"/>
+       <Step StepName="setDB" StepParameterID="insertData"/>
+       <Step StepName="doFF14QueryUserid_201" StepParameterID="ff14_query_userid"/>
+       <Step StepName="assertResult" StepParameterID="expectedResult"/>
+       <Step StepName="setDB" StepParameterID="deletlData"/>
+    </TestCase>
+  </AllTestCases>

@@ -1,0 +1,73 @@
+<AllStepParameters>
+    <StepParameter ID="insertData" Name="insertData">
+      <ConnectionString>jdbc:mysql://10.48.16.43:4437/yx_user</ConnectionString>
+      <CommandText>INSERT INTO `client_game_user_login_record` (`userId`, `appKey`, `loginName`, `userType`, `loginToken`, `updateTime`, `createTime`) VALUES ('{userId}', '4705cab40147eddbb578257a0fe00581', '{loginName}', '{userType}', 'asdf', '2014-07-17 09:37:28', '2014-07-16 00:00:00');</CommandText>
+      <Parameters>
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/>  
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="deletlData" Name="deletlData">
+      <ConnectionString>jdbc:mysql://10.48.16.43:4437/yx_user</ConnectionString>
+      <CommandText>DELETE FROM `yx_user`.`client_game_user_login_record` WHERE `userId` = {userId} and `loginName` = '{loginName}' and `userType` = {userType}</CommandText>
+      <Parameters>
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/>  
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="enQuick" Name="enQuick">
+      <ConnectionString></ConnectionString>
+      <CommandText></CommandText>
+      <Parameters>
+      <parameter Key="userId" Value="1200000290"/>
+      <parameter Key="loginName" Value="kokokuaituishahe"/>
+      <parameter Key="userType" Value="2"/>
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="znQuick" Name="znQuick">
+      <ConnectionString></ConnectionString>
+      <CommandText></CommandText>
+      <Parameters>
+      <parameter Key="userId" Value="1245000076"/>
+      <parameter Key="loginName" Value="沙盒中文"/>
+      <parameter Key="userType" Value="2"/>
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="enPass" Name="enPass">
+      <ConnectionString></ConnectionString>
+      <CommandText></CommandText>
+      <Parameters>
+      <parameter Key="userId" Value="441267695"/>
+      <parameter Key="loginName" Value="qixiuping@baidu.com"/>
+      <parameter Key="userType" Value="1"/>
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="znPass" Name="znPass">
+      <ConnectionString></ConnectionString>
+      <CommandText></CommandText>
+      <Parameters>
+      <parameter Key="userId" Value="441117228"/>
+      <parameter Key="loginName" Value="koko账号"/>
+      <parameter Key="userType" Value="1"/>
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="ff14_query_userid" Name="ff14_query_userid">
+      <ConnectionString></ConnectionString>
+      <CommandText></CommandText>
+      <Parameters>
+      <parameter Key="url" Value="http://youxi.baidu.com/sso/cp/ff14_query_userid.json"/>
+      <parameter Key="httpmethod" Value="POST"/>
+      <parameter Key="$loginName" Value=""/>
+      <parameter Key="$appKey" Value="4705cab40147eddbb578257a0fe00581"/>
+      <parameter Key="$random" Value="1"/>
+      <parameter Key="$sign" Value=""/>
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="expectedResult" Name="expectedResult">
+      <ConnectionString></ConnectionString>
+      <CommandText></CommandText>
+      <Parameters>
+      <parameter Key="11" Value="11"/>
+     </Parameters>
+    </StepParameter>
+  </AllStepParameters>

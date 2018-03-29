@@ -1,0 +1,45 @@
+<!-- 九鼎客户端setCookies接口多步TestCase.xml -->
+<AllTestCases>
+	<StepParametersFilePath>JDSetCookiesStepParameters.xml
+	</StepParametersFilePath>
+	<StepAssembly>com.baidu.gameqa.iat.steps.sso.</StepAssembly>
+	<StepGroup>JDSetCookies_QA</StepGroup>
+	
+	<!-- 九鼎客户端setCookies接口-case1-快推账号登录成功后的setCookies -->
+	<TestCase ID="JDSetCookies_QACase01" Name="JDSetCookies01">
+		<Step StepName="getDescryString" StepParameterID="JDSetCookies_QACase1_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDSetCookies_QACase1_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDSetCookies_QACase1_Parameters" />
+		<Step StepName="setCookies" StepParameterID="JDSetCookies_QACase1_Parameters" />
+		<Step StepName="assertCookies" StepParameterID="JDSetCookies_QACase1_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDSetCookies_QACase1_Parameters" />
+	</TestCase>
+	
+	<!-- 九鼎客户端setCookies接口-case2-passport账号登录成功后的setCookies -->
+	<TestCase ID="JDSetCookies_QACase02" Name="JDSetCookies02">
+		<Step StepName="getDescryString" StepParameterID="JDSetCookies_QACase2_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDSetCookies_QACase2_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDSetCookies_QACase2_Parameters" />
+		<Step StepName="setCookies" StepParameterID="JDSetCookies_QACase2_Parameters" />
+		<Step StepName="assertCookies" StepParameterID="JDSetCookies_QACase2_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDSetCookies_QACase2_Parameters" />
+	</TestCase>
+	
+	<!-- 九鼎客户端setCookies接口-case3-setCookies使用错误的userId参数 -->
+	<TestCase ID="JDSetCookies_QACase03" Name="JDSetCookies03">
+		<Step StepName="getDescryString" StepParameterID="JDSetCookies_QACase3_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDSetCookies_QACase3_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDSetCookies_QACase3_Parameters" />
+		<Step StepName="setCookiesWithWrongUserId" StepParameterID="JDSetCookies_QACase3_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDSetCookies_QACase3_Parameters" />
+	</TestCase>
+	
+	<!-- 九鼎客户端setCookies接口-case4-setCookies使用错误的loginToken参数 -->
+	<TestCase ID="JDSetCookies_QACase04" Name="JDSetCookies04">
+		<Step StepName="getDescryString" StepParameterID="JDSetCookies_QACase4_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDSetCookies_QACase4_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDSetCookies_QACase4_Parameters" />
+		<Step StepName="setCookiesWithWrongLoginToken" StepParameterID="JDSetCookies_QACase4_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDSetCookies_QACase4_Parameters" />
+	</TestCase>
+</AllTestCases>

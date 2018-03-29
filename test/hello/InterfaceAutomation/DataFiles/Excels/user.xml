@@ -1,0 +1,10 @@
+<AllStepParameters>
+     <StepParameter ID="ajaxuser1" Name="ajaxuser" >
+      <ConnectionString>jdbc:mysql://10.48.16.43:4437/yx_user</ConnectionString>
+			<CommandText>SELECT * FROM yx_user_74 WHERE userName = 'nancy1@qq.com'</CommandText>
+      <Parameters>
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/>	
+     </Parameters>
+    </StepParameter>
+</AllStepParameters>

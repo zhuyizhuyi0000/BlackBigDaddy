@@ -1,0 +1,11 @@
+  <AllTestCases>
+    <StepParametersFilePath>MemberOrderApplyQuickOrderStepParameters.xml</StepParametersFilePath>
+    <StepAssembly>com.baidu.gameqa.iat.steps.member.</StepAssembly>
+    <StepGroup>MemberOrderApplyQuickOrderSteps</StepGroup>
+    <TestCase ID="member_order_applyQuickOrder_case01" Name="member_order_applyQuickOrder_case01">
+     	 <Step StepName="setCookies" StepParameterID="kokoQaCookie" StepAssembly="com.baidu.gameqa.iat.steps.common." StepGroup="SetupSteps" StepParametersFilePath="SetupParameters.xml"/>
+       <!--<Step StepName="browseNewyouxi" StepParameterID="browseNewyouxi" StepAssembly="com.baidu.gameqa.iat.steps.member." StepGroup="MemberStorePaySteps" StepParametersFilePath="MemberStorePayStepParameters.xml"/>-->
+       <Step StepName="doApplyQuickOrder" StepParameterID="MemberOrderApplyQuickOrder"/>
+       <Step StepName="assertOrderExist" StepParameterID="orderInfo"/>
+    </TestCase>
+  </AllTestCases>

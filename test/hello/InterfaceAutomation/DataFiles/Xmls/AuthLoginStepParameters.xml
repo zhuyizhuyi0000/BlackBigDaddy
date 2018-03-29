@@ -1,0 +1,91 @@
+<AllStepParameters>
+      <!-- QA环境登录多步中读取到innerLogin中的anthkey进行使用并且还有二次使用返回结果-case1-普通快推账号 -->
+    <StepParameter ID="AuthLogin_case01_Parameters" Name="AuthLogin_case01_Parameters">
+      <ConnectionString>NULL</ConnectionString>
+      <CommandText>NULL</CommandText>
+      <Parameters>
+      <parameter Key="url_InnerLogin" Value="http://10.48.55.37:8050/sso/login/innerLogin.json"/>
+      <parameter Key="httpmethod_InnerLogin" Value="POST"/>
+      <parameter Key="$loginName" Value="qatest0011"/>
+      <parameter Key="$password" Value="123"/>
+
+
+      <parameter Key="url_authInnerLogin" Value="http://10.48.55.37:8050/sso/login/authInnerLogin.json"/>
+      <parameter Key="httpmethod_authInnerLogin" Value="POST"/>
+      <parameter Key="expectedResult1" Value='{"data":{"uid":"1252080985"},"code":"A00000"}' />
+      <parameter Key="expectedResult2" Value='{"data":{},"code":"A00001"}' />
+     </Parameters>
+    </StepParameter>
+
+      <!-- QA环境登录多步中读取到innerLogin中的anthkey进行使用返回结果-case2-快推手机账号 -->
+    <StepParameter ID="AuthLogin_case02_Parameters" Name="AuthLogin_case02_Parameters">
+      <ConnectionString>NULL</ConnectionString>
+      <CommandText>NULL</CommandText>
+      <Parameters>
+      <parameter Key="url_InnerLogin" Value="http://10.48.55.37:8050/sso/login/innerLogin.json"/>
+      <parameter Key="httpmethod_InnerLogin" Value="POST"/>
+      <parameter Key="$loginName" Value="13811184248"/>
+      <parameter Key="$password" Value="123"/>
+
+
+      <parameter Key="url_authInnerLogin" Value="http://10.48.55.37:8050/sso/login/authInnerLogin.json"/>
+      <parameter Key="httpmethod_authInnerLogin" Value="POST"/>
+      <parameter Key="expectedResult1" Value='{"data":{"uid":"1252080987"},"code":"A00000"}' />
+      <parameter Key="expectedResult2" Value='{"data":{},"code":"A00001"}' />
+     </Parameters>
+    </StepParameter>
+
+     <!-- QA环境登录多步中读取到innerLogin中的anthkey进行使用返回结果-case3-快推账号包含特殊字符（+）账号 -->
+    <StepParameter ID="AuthLogin_case03_Parameters" Name="AuthLogin_case03_Parameters">
+      <ConnectionString>NULL</ConnectionString>
+      <CommandText>NULL</CommandText>
+      <Parameters>
+      <parameter Key="url_InnerLogin" Value="http://10.48.55.37:8050/sso/login/innerLogin.json"/>
+      <parameter Key="httpmethod_InnerLogin" Value="POST"/>
+      <parameter Key="$loginName" Value="test+game"/>
+      <parameter Key="$password" Value="123"/>
+
+
+      <parameter Key="url_authInnerLogin" Value="http://10.48.55.37:8050/sso/login/authInnerLogin.json"/>
+      <parameter Key="httpmethod_authInnerLogin" Value="POST"/>
+      <parameter Key="expectedResult1" Value='{"data":{"uid":"1252080990"},"code":"A00000"}' />
+      <parameter Key="expectedResult2" Value='{"data":{},"code":"A00001"}' />
+     </Parameters>
+    </StepParameter>
+
+    <!-- QA环境登录多步中读取到innerLogin中的anthkey进行使用返回结果-case4-快推账号包含特殊字符（空格）账号 -->
+    <StepParameter ID="AuthLogin_case04_Parameters" Name="AuthLogin_case04_Parameters">
+      <ConnectionString>NULL</ConnectionString>
+      <CommandText>NULL</CommandText>
+      <Parameters>
+      <parameter Key="url_InnerLogin" Value="http://10.48.55.37:8050/sso/login/innerLogin.json"/>
+      <parameter Key="httpmethod_InnerLogin" Value="POST"/>
+      <parameter Key="$loginName" Value="test game"/>
+      <parameter Key="$password" Value="123"/>
+
+
+      <parameter Key="url_authInnerLogin" Value="http://10.48.55.37:8050/sso/login/authInnerLogin.json"/>
+      <parameter Key="httpmethod_authInnerLogin" Value="POST"/>
+      <parameter Key="expectedResult1" Value='{"data":{"uid":"1252080990"},"code":"A00000"}' />
+      <parameter Key="expectedResult2" Value='{"data":{},"code":"A00001"}' />
+     </Parameters>
+    </StepParameter>
+
+    <!-- QA环境登录多步中读取到innerLogin中的anthkey进行使用返回结果-case5-快推中文名称账号 -->
+    <StepParameter ID="AuthLogin_case05_Parameters" Name="AuthLogin_case05_Parameters">
+      <ConnectionString>NULL</ConnectionString>
+      <CommandText>NULL</CommandText>
+      <Parameters>
+      <parameter Key="url_InnerLogin" Value="http://10.48.55.37:8050/sso/login/innerLogin.json"/>
+      <parameter Key="httpmethod_InnerLogin" Value="POST"/>
+      <parameter Key="$loginName" Value="测试账号"/>
+      <parameter Key="$password" Value="123"/>
+
+
+      <parameter Key="url_authInnerLogin" Value="http://10.48.55.37:8050/sso/login/authInnerLogin.json"/>
+      <parameter Key="httpmethod_authInnerLogin" Value="POST"/>
+      <parameter Key="expectedResult1" Value='{"data":{"uid":"1252080988"},"code":"A00000"}' />
+      <parameter Key="expectedResult2" Value='{"data":{},"code":"A00001"}' />
+     </Parameters>
+    </StepParameter>
+</AllStepParameters>

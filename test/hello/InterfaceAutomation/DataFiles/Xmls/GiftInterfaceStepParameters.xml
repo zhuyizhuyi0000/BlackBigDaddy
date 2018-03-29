@@ -1,0 +1,12 @@
+<AllStepParameters>
+	<StepParameter ID="" Name="">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="url" Value="http://youxi.baidu.com/i/ajax_gift_product.xhtml" />
+			<parameter Key="c" Value="check" />
+			<parameter Key="id" Value="3" />
+			<parameter Key="count" Value="1" />
+		</Parameters>
+	</StepParameter>
+</AllStepParameters>

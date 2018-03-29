@@ -1,0 +1,40 @@
+<AllStepParameters>
+
+	<StepParameter ID="GiftProductData_Parameters" Name="GiftProductData">
+		<!-- <ConnectionString>jdbc:mysql://10.94.38.24:4429/iyouxi</ConnectionString> -->
+		<ConnectionString>jdbc:mysql://10.48.16.43:4430/game</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="table" Value="youxi_gift_product" />
+			
+			<parameter Key="setKey" Value="userLimit" />
+			<parameter Key="setValue" Value='[{"code":"userBindEmail"}]' />
+			
+			<parameter Key="whereKey" Value="id" />
+			<parameter Key="whereValue" Value="1" />
+		</Parameters>
+	</StepParameter>
+	
+	<StepParameter ID="GiftUserBindPhone_Parameters" Name="BindPhone">
+		<!-- <ConnectionString>jdbc:mysql://10.94.38.24:4429/iyouxi</ConnectionString> -->
+		<ConnectionString>jdbc:mysql://10.48.16.43:4430/game</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="table" Value="youxi_gift_product" />
+			
+			<parameter Key="setKey" Value="userLimit" />
+			<parameter Key="setValue" Value='[{"code":"userBindPhone"}]' />
+			
+			<parameter Key="whereKey" Value="id" />
+			<parameter Key="whereValue" Value="1" />
+		</Parameters>
+	</StepParameter>
+
+
+</AllStepParameters>

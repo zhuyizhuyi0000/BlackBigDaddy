@@ -1,0 +1,22 @@
+<AllStepParameters>
+  <StepParameter ID="signed" Name="signed">
+    <ConnectionString></ConnectionString>
+    <CommandText></CommandText>
+    <Parameters>
+      <parameter Key="url" Value="http://youxi.baidu.com/sso/app/getLoginLockStatus.json"/>
+      <parameter Key="httpmethod" Value="GET"/>
+      <parameter Key="$userId" Value="1252081939"/><!-- #koko110350 / qwe123-->
+      <parameter Key="expectedResult" Value="{&quot;status&quot;:200,&quot;message&quot;:&quot;query success&quot;,&quot;needVcode&quot;:0,&quot;sign&quot;:null,&quot;body&quot;:&quot;1&quot;}"/>
+    </Parameters>
+  </StepParameter>
+  <StepParameter ID="notSign" Name="notSign">
+    <ConnectionString></ConnectionString>
+    <CommandText></CommandText>
+    <Parameters>
+    <parameter Key="url" Value="http://youxi.baidu.com/sso/app/getLoginLockStatus.json"/>
+    <parameter Key="httpmethod" Value="GET"/>
+    <parameter Key="$userId" Value="1252081940"/><!-- #koko110351 / qwe123 -->
+    <parameter Key="expectedResult" Value="{&quot;status&quot;:200,&quot;message&quot;:&quot;query success&quot;,&quot;needVcode&quot;:0,&quot;sign&quot;:null,&quot;body&quot;:&quot;0&quot;}"/>
+   </Parameters>
+  </StepParameter>    
+</AllStepParameters>

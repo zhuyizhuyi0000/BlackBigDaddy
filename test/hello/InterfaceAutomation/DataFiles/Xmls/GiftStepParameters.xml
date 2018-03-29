@@ -1,0 +1,1083 @@
+<!-- 礼包频道规则校验 -->
+<AllStepParameters>
+    <StepParameter ID="login" Name="login">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="loginName" Value="bbs" />
+			<parameter Key="password" Value="123" />
+			<parameter Key="url" Value="http://youxi.baidu.com/sso/login/login.json" />
+		</Parameters>
+	</StepParameter>
+
+    <StepParameter ID="giftPayCheck" Name="giftPayCheck">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="giftPayCheckUrl" Value="http://youxi.baidu.com/i/ajax_gift_product.xhtml" />
+			<parameter Key="c" Value="check" />
+			<parameter Key="id" Value="1" />
+			<parameter Key="count" Value="1" />
+		</Parameters>
+	</StepParameter>
+
+<!-- 
+    <StepParameter ID="login" Name="login">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="loginName" Value="bbs" />
+			<parameter Key="password" Value="123" />
+			<parameter Key="url" Value="http://youxi.baidu.com/sso/login/login.json" />
+		</Parameters>
+	</StepParameter>
+ -->
+
+	<!-- 初始化数据库基础数据 -->
+	<StepParameter ID="InitDBData" Name="InitDBData">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="userId" Value="1252071875" />
+	
+			
+
+		</Parameters>
+	</StepParameter>
+	
+	<!-- 用户已获得礼包数量大于限制数量 -->
+	<StepParameter ID="setUserGotGiftNum_morethan_personLimit" Name="setUserGotGiftNum_morethan_personLimit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+	<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />			
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="userId" Value="1252071875" />			
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userGotCount" Value="2" />
+			<parameter Key="personLimitNum" Value="2" />
+			
+			<parameter Key="expectedResult" Value='"result": "-1"' />
+			<parameter Key="assertType" Value="contains" />
+
+		</Parameters>
+	</StepParameter>
+ 	
+	<!-- 用户已获得礼包数量等于限制数量 -->
+	<StepParameter ID="setUserGotGiftNum_equal_personLimit" Name="setUserGotGiftNum_equal_personLimit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />			
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="userId" Value="1252071875" />			
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userGotCount" Value="1" />
+			<parameter Key="personLimitNum" Value="2" />
+			
+			<parameter Key="expectedResult" Value='"result": "0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+	
+	<!-- 用户已获得礼包数量小于限制数量 -->
+	<StepParameter ID="setUserGotGiftNum_lessthan_personLimit" Name="setUserGotGiftNum_lessthan_personLimit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />			
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="userId" Value="1252071875" />			
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userGotCount" Value="1" />
+			<parameter Key="personLimitNum" Value="4" />
+			
+			<parameter Key="expectedResult" Value='"result": "0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!-- 用户没有礼包 -->
+	<StepParameter ID="setUserGotGiftNum_nonegot" Name="setUserGotGiftNum_nonegot">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />			
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="userId" Value="1252071875" />			
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userGotCount" Value="0" />
+			<parameter Key="personLimitNum" Value="1" />
+			
+			<parameter Key="expectedResult" Value='"result": "-1"' />
+			<parameter Key="assertType" Value="contains" />
+		
+		</Parameters>
+	</StepParameter>
+
+	
+	<!-- 礼包已发放数量大于礼包总数量 -->
+	<StepParameter ID="setGiftGotNum_morethan_totalNum" Name="setGiftGotNum_morethan_totalNum">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="userId" Value="1252071875" />	
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="gotNum" Value="5" />			
+			<parameter Key="totalNum" Value="5" />
+			<parameter Key="expectedResult" Value='"result": "-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+	
+	<!-- 礼包已发放数量小于礼包总数量 -->
+	<StepParameter ID="setGiftGotNum_lessthan_totalNum" Name="setGiftGotNum_lessthan_totalNum">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="gotNum" Value="1" />			
+			<parameter Key="totalNum" Value="5" />
+			<parameter Key="expectedResult" Value='"result": "0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+	
+		
+	<!-- 礼包已发放数量等于于礼包总数量 -->
+	<StepParameter ID="setGiftGotNum_equal_totalNum" Name="setGiftGotNum_equal_totalNum">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="gotNum" Value="1" />			
+			<parameter Key="totalNum" Value="2" />
+			<parameter Key="expectedResult" Value='"result": "0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+	
+
+		<!-- 礼包在有效期内 -->
+	<StepParameter ID="setTimeIN" Name="setTimeIN">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="startTime" Value="-1" />			
+			<parameter Key="endTime" Value="1" />
+			<parameter Key="userLimit" Value='[{"code":"timeRangeLimit"}]' />
+			
+			<parameter Key="expectedResult" Value='"result": "0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!-- 礼包已过期 -->
+	<StepParameter ID="setTimeOut" Name="setTimeOut">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="startTime" Value="-2" />			
+			<parameter Key="endTime" Value="-1" />
+			<parameter Key="userLimit" Value='[{"code":"timeRangeLimit"}]'/>
+			
+			<parameter Key="expectedResult" Value='"result":"-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+
+	<!-- 礼包未开始 -->
+	<StepParameter ID="setTimeNotStart" Name="setTimeNotStart">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="startTime" Value="1" />			
+			<parameter Key="endTime" Value="2" />
+			<parameter Key="userLimit" Value='[{"code":"timeRangeLimit"}]'/>
+			
+			<parameter Key="expectedResult" Value='"result": "-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!-- vip等级大于要求值 -->
+	<StepParameter ID="setUserLevel_GT_limit" Name="setUserLevel_GT_limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="vipLevel" Value="2" />
+			<parameter Key="score" Value="650" />			
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userLimit" Value='[{"code":"vipLevel","min":"1"}]' />
+			
+			<parameter Key="expectedResult" Value='"result": "0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!-- vip等级小于要求值 -->
+	<StepParameter ID="setUserLevel_LT_limit" Name="setUserLevel_LT_limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="vipLevel" Value="2" />
+			<parameter Key="score" Value="650" />			
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userLimit" Value='[{"code":"vipLevel","min":"4"}]' />
+			
+			<parameter Key="expectedResult" Value='"result": "-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!-- vip等级等于要求值 -->
+	<StepParameter ID="setUserLevel_EQ_limit" Name="setUserLevel_EQ_limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="vipLevel" Value="2" />
+			<parameter Key="score" Value="650" />			
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userLimit" Value='[{"code":"vipLevel","min":"2"}]' />
+			
+			<parameter Key="expectedResult" Value='"result": "0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--没有vip等级 -->
+	<StepParameter ID="setUserLevel_notvip" Name="setUserLevel_notvip">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="vipLevel" Value="0" />
+			<parameter Key="score" Value="0" />			
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userLimit" Value='[{"code":"vipLevel","min":"1"}]' />
+			
+			<parameter Key="expectedResult" Value='"result": "-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+
+	<!--会员等级大于要求值 -->
+	<StepParameter ID="setMemberLevel_GT_limit" Name="setMemberLevel_GT_limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="level" Value="2" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userLimit" Value='[{"memberLevel","min":"1"}]' />
+			
+			<parameter Key="expectedResult" Value='"result": "0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+	
+	<!--会员等级小于要求值 -->
+	<StepParameter ID="setMemberLevel_LT_limit" Name="setMemberLevel_LT_limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="level" Value="2" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userLimit" Value='[{"memberLevel","min":"4"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--会员等级等于要求值 -->
+	<StepParameter ID="setMemberLevel_EQ_limit" Name="setMemberLevel_EQ_limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="level" Value="2" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userLimit" Value='[{"memberLevel","min":"2"}]' />
+			
+			<parameter Key="expectedResult" Value='"result": "0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--不是会员 -->
+	<StepParameter ID="setMemberLevel_notmenber" Name="setMemberLevel_notmenber">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="level" Value="0" />
+			<parameter Key="userId" Value="1252071875" />
+		 	<parameter Key="userName" Value="#gift" />
+			<parameter Key="userLimit" Value='[{"memberLevel","min":"1"}]' />
+			
+			<parameter Key="expectedResult" Value='"result": "-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--积分值大于要求值-->
+	<StepParameter ID="setCoin_GT_Limit" Name="setCoin_GT_Limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="score" Value="20" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userLimit" Value='[{"code":"userPayByCoinBalance","min":"10"}]' />
+			
+			<parameter Key="expectedResult" Value='"result": "0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--积分值小于要求值-->
+	<StepParameter ID="setCoin_LT_Limit" Name="setCoin_LT_Limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			
+			<parameter Key="score" Value="20" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userLimit" Value='[{"code":"userPayByCoinBalance","min":"100"}]' />
+			
+			<parameter Key="expectedResult" Value='"result": "-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+
+	<!--积分值等于要求值-->
+	<StepParameter ID="setCoin_EQ_Limit" Name="setCoin_EQ_Limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			
+			<parameter Key="score" Value="10" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userLimit" Value='[{"code":"userPayByCoinBalance","min":"10"}]' />
+			
+			<parameter Key="expectedResult" Value='"result": "0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--没有积分-->
+	<StepParameter ID="setCoin_nonecoin" Name="setCoin_nonecoin">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="score" Value="0" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userLimit" Value='[{"code":"userPayByCoinBalance","min":"10"}]' />
+			
+			<parameter Key="expectedResult" Value='"result": "-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+
+	<!--金券值大于要求值-->
+	<StepParameter ID="setGold_GT_Limit" Name="setGold_GT_Limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="gold" Value="20" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="endTime" Value="2016-11-28 14:58:58" />
+			<parameter Key="userLimit" Value='[{"code":"userPayByGoldBalance","min":"10"}]' />
+			
+			<parameter Key="expectedResult" Value='"result": "0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--金券值小于要求值-->
+	<StepParameter ID="setGold_LT_Limit" Name="setGold_LT_Limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="score" Value="20" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userLimit" Value='[{"code":"userPayByGoldBalance","min":"100"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--金券值等于要求值-->
+	<StepParameter ID="setGold_EQ_Limit" Name="setGold_EQ_Limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="score" Value="20" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userLimit" Value='[{"code":"userPayByGoldBalance","min":"20"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--没有金券-->
+	<StepParameter ID="setGold_noneGold" Name="setGold_noneGold">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="score" Value="0" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userLimit" Value='[{"code":"userPayByGoldBalance","min":"10"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--充值金额大于要求值-->
+	<StepParameter ID="setUserAmount_GT_Limit" Name="setUserAmount_GT_Limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="amount" Value="20" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userName" Value="#gift" />
+
+			<parameter Key="userLimit" Value='[{"code":"userAmount","min":"10"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--充值金额小于要求值-->
+	<StepParameter ID="setUserAmount_LT_Limit" Name="setUserAmount_LT_Limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="amount" Value="5" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userName" Value="#gift" />
+
+			<parameter Key="userLimit" Value='[{"code":"userAmount","min":"10"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--充值金额等于要求值-->
+	<StepParameter ID="setUserAmount_EQ_Limit" Name="setUserAmount_EQ_Limit">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="amount" Value="1000" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userName" Value="#gift" />
+
+			<parameter Key="userLimit" Value='[{"code":"userAmount","min":"1000"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--无充值金额-->
+	<StepParameter ID="setUserAmount_noneAmount" Name="setUserAmount_noneAmount">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="amount" Value="0" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="userName" Value="#gift" />
+
+			<parameter Key="userLimit" Value='[{"code":"userAmount","min":"10"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--未绑定邮箱-->
+	<StepParameter ID="setBindEmail_no" Name="setBindEmail_no">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="email" Value="" />
+
+			<parameter Key="userLimit" Value='[{"code":"userBindEmail"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--已绑定邮箱-->
+	<StepParameter ID="setBindEmail_yes" Name="setBindEmail_yes">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="email" Value="1334448767@qq.com" />
+
+			<parameter Key="userLimit" Value='[{"code":"userBindEmail"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--已绑定手机-->
+	<StepParameter ID="setBindPhone_yes" Name="setBindPhone_yes">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="phone" Value="13567890278" />
+
+			<parameter Key="userLimit" Value='[{"code":"userBindPhone"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+	<!--未绑定手机-->
+	<StepParameter ID="setBindPhone_no" Name="setBindPhone_no">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="phone" Value="" />
+
+			<parameter Key="userLimit" Value='[{"code":"userBindPhone"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"-1"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+
+   <!--礼包在有效期且VIP等级大于要求值-->
+	<StepParameter ID="setTimeINLevelGT_yes" Name="setTimeINLevelGT_yes">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="startTime" Value="-1" />			
+			<parameter Key="endTime" Value="1" />
+			<parameter Key="vipLevel" Value="2" />
+			<parameter Key="score" Value="650" />		
+			<parameter Key="userLimit" Value='[{"code":"timeRangeLimit"},{"code":"vipLevel","min":"1"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+	
+
+   <!--礼包在有效期且会员等级大于要求值-->
+	<StepParameter ID="setTimeINMemberLevelGT_yes" Name="setTimeINMemberLevelGT_yes">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="startTime" Value="-1" />			
+			<parameter Key="endTime" Value="1" />
+			<parameter Key="level" Value="2" />
+			<parameter Key="score" Value="650" />		
+			<parameter Key="userLimit" Value='[{"code":"timeRangeLimit"},{"memberLevel","min":"1"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+	
+	
+	  <!--礼包在有效期且积分大于要求值-->
+	<StepParameter ID="setTimeINCoinGT_yes" Name="setTimeINCoinGT_yes">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="giftId" Value="1" />
+			<parameter Key="startTime" Value="-1" />			
+			<parameter Key="endTime" Value="1" />
+			<parameter Key="score" Value="20" />		
+			<parameter Key="userLimit" Value='[{"code":"timeRangeLimit"},{"code":"userPayByCoinBalance","min":"10"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+	
+	
+		<!--礼包在有效期且充值金额大于要求值-->
+	<StepParameter ID="setTimeINAmountGT_yes" Name="setTimeINAmountGT_yes">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="amount" Value="20" />
+			<parameter Key="startTime" Value="-1" />			
+			<parameter Key="endTime" Value="1" />
+			<parameter Key="userLimit" Value='[{"code":"timeRangeLimit"},{"code":"userAmount","min":"10"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+	
+			<!--礼包在有效期且已绑定邮箱-->
+	<StepParameter ID="setTimeINBindEmail_yes" Name="setTimeINBindEmail_yes">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="amount" Value="20" />
+			<parameter Key="startTime" Value="-1" />			
+			<parameter Key="endTime" Value="1" />
+			<parameter Key="userLimit" Value='[{"code":"timeRangeLimit"},{"code":"userBindEmail"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+	
+	
+		<!--礼包在有效期且已绑定邮箱-->
+	<StepParameter ID="setTimeINBindPhone_yes" Name="setTimeINBindPhone_yes">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+<!--QA地址  	<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:4429/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.48.16.43:4430/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.48.16.43:4430/memter"/>-->	
+			
+			<parameter Key="iyouxidb" Value="jdbc:mysql://10.94.38.24:3306/iyouxi" />
+			<parameter Key="youxidb" Value="jdbc:mysql://10.94.38.24:3306/game" />
+			<paramerter Key="member" Value="jdbc:mysql://10.94.38.24:3306/memter"/>
+			<parameter Key="user" Value="game" />
+			<parameter Key="password" Value="game" />
+			
+			<parameter Key="userName" Value="#gift" />
+			<parameter Key="userId" Value="1252071875" />
+			<parameter Key="phone" Value="13567890278" />
+			<parameter Key="startTime" Value="-1" />			
+			<parameter Key="endTime" Value="1" />
+			<parameter Key="userLimit" Value='[{"code":"timeRangeLimit"},{"code":"userBindPhone"}]' />
+			
+			<parameter Key="expectedResult" Value='"result":"0"' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+</AllStepParameters>

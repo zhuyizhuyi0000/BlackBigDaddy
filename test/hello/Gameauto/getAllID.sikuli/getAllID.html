@@ -1,0 +1,142 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }  
+         
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>getAllID.sikuli\getAllID.sikuli</h2> <a href="getAllID.sikuli\getAllID.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">from</span> sikuli <span class="kw">import</span> *
+<span class="kw">import</span> urllib
+<span class="cmt">#print '\n'.join(sys.path)
+</span><span class="kw">import</span> simplejson <span class="kw">as</span> json
+<span class="kw">from</span> array <span class="kw">import</span> array
+
+<span class="kw">def</span> getGameIdList():
+    <span class="cmt">#url_gameid = 'http://youxi.baidu.com/godoubi.xhtml?c=loadgame'
+</span>    url_gameid = <span class="str">'http://wanba.baidu.com/godoubi.xhtml?c=loadgame'</span>
+    page = urllib.urlopen(url_gameid)
+    page_result_str = page.read()
+    page_result_json = json.loads(page_result_str)
+    gameId_list = []
+    gameList = page_result_json[<span class="str">"gameList"</span>]  <span class="cmt">#得到gameList</span>
+
+    letter_list = [<span class="str">"ABC"</span>,<span class="str">"DEFG"</span>,<span class="str">"HIJK"</span>,<span class="str">"LMNO"</span>,<span class="str">"TPQRS"</span>,<span class="str">"UVWX"</span>,<span class="str">"YZ"</span>]
+    <span class="kw">for</span> letter <span class="kw">in</span> letter_list:
+       gameList_letter = gameList[letter]
+       <span class="kw">for</span> val <span class="kw">in</span> gameList_letter:   <span class="cmt">#得到gameid</span>
+           gameid = val[<span class="str">"id"</span>]
+           gameId_list.append(gameid)
+    <span class="kw">print</span>  gameId_list
+    <span class="kw">return</span> gameId_list
+
+<span class="kw">def</span> getServerIdList(gameid):
+    url = <span class="str">'http://youxi.baidu.com/server_list_not_login.xhtml?c=gameList&amp;gid='</span>+gameid
+    page = urllib.urlopen(url)
+    page_result_str = page.read()
+    page_result_json = json.loads(page_result_str)
+    serverList =  page_result_json[<span class="str">"serverList"</span>]
+    serverId_list = []
+    <span class="kw">for</span> val <span class="kw">in</span> serverList:  <span class="cmt">#处理serverlist--只留serverid</span>
+        status = val[<span class="str">"status"</span>]
+        status_weihuzhong = <span class="str">"维护中"</span>.decode(<span class="str">'utf-8'</span>)
+        status_huobaokaiqi = <span class="str">"火爆开启"</span>.decode(<span class="str">'utf-8'</span>)
+        status_zhengchangkaiqi = <span class="str">"正常开启"</span>.decode(<span class="str">'utf-8'</span>)
+
+        <span class="kw">if</span> status == status_huobaokaiqi <span class="kw">or</span> status == status_zhengchangkaiqi:
+            list = val[<span class="str">"params"</span>].split(<span class="str">'='</span>)
+            server_no = len(list)
+            serverid = list[server_no-<span class="dig">1</span>]
+            e = serverid.encode(<span class="str">'raw_unicode_escape'</span>)  <span class="cmt">#去掉u  </span>
+            serverId_list.append(e)
+        <span class="kw">if</span> len(serverId_list) ==<span class="dig">1</span>:
+            <span class="kw">break</span>
+    <span class="kw">print</span>(serverId_list)
+    <span class="kw">return</span> serverId_list
+
+<span class="kw">def</span> getDataDict():
+    data_list = []
+    gameId_list = getGameIdList()
+    <span class="kw">for</span> gameid <span class="kw">in</span> gameId_list:
+      serverId_list = getServerIdList(str(gameid))
+      <span class="kw">for</span> serverid <span class="kw">in</span> serverId_list:
+          data_dict = dict.fromkeys([<span class="str">'gameId'</span>,<span class="str">'serverId'</span>],<span class="dig">0</span>)
+          data_dict[<span class="str">'gameId'</span>] = str(gameid)
+          data_dict[<span class="str">'serverId'</span>] = serverid
+          data_list.append(data_dict)
+          <span class="kw">del</span> data_dict
+    <span class="kw">print</span> data_list
+    <span class="kw">return</span> data_list
+
+
+<span class="kw">if</span> __name__ == <span class="str">'__main__'</span>:
+    getGameIdList()
+    <span class="cmt">#getServerIdList("776")
+</span>    <span class="cmt">#getDataDict()</span>
+</pre>
+</body>
+</html>

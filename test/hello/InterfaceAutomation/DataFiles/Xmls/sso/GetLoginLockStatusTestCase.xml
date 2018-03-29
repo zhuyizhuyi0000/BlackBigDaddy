@@ -1,0 +1,11 @@
+  <AllTestCases>
+    <StepParametersFilePath>sso/GetLoginLockStatusStepParameters.xml</StepParametersFilePath>
+    <StepAssembly>com.baidu.gameqa.iat.steps.sso.</StepAssembly>
+    <StepGroup>GetLoginLockStatusSteps</StepGroup>
+    <TestCase ID="signed" Name="signed">
+       <Step StepName="doGetLoginLockStatus" StepParameterID="signed"/>
+    </TestCase>
+    <TestCase ID="notSign" Name="notSign">
+       <Step StepName="doGetLoginLockStatus" StepParameterID="notSign"/>
+    </TestCase>
+  </AllTestCases>

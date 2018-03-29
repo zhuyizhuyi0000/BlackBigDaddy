@@ -1,0 +1,17 @@
+<AllStepParameters>
+    
+    <StepParameter ID="getmsg" Name="getmsg" >
+      <ConnectionString></ConnectionString>
+      <CommandText></CommandText>
+      <Parameters>
+      <parameter Key="getmsgUrl" Value="http://i.youxi.baidu.com/ajax/getmsg.jsonp?circle=1"/>	
+      <parameter Key="settingDB" Value="jdbc:mysql://10.48.16.43:4433/gamewindow"/>
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/>  
+      <parameter Key="select_message_client_setting" Value="SELECT value FROM `message_client_setting` where clientid = 310006387"/>
+     </Parameters>
+    </StepParameter>
+
+
+    
+</AllStepParameters>

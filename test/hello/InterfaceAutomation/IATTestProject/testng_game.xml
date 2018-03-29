@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+      <class name="com.baidu.gameqa.generation.Game__ajax_search"/> 
+      <class name="com.baidu.gameqa.generation.Game__ajax_recommend_game"/>
+      <class name="com.baidu.gameqa.generation.Game__ajax_game_announce"/>
+      <class name="com.baidu.gameqa.generation.Game__ajax_youxi"/>
+      <class name="com.baidu.gameqa.generation.Game__server_select"/>
+      <class name="com.baidu.gameqa.generation.Game__server_list_not_login"/>
+      <class name="com.baidu.gameqa.generation.user__ajax_user"/>
+      <class name="com.baidu.gameqa.generation.user__ajax_user_center"/>
+      <class name="com.baidu.gameqa.generation.Game__youxicard_article"/><!--Guolin 11/19/2014-->
+      <class name="com.baidu.gameqa.generation.Game__youxicard_all"/><!--Guolin 11/19/2014-->
+    </classes>
+  </test>
+</suite>

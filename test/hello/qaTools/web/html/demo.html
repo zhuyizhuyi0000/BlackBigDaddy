@@ -1,0 +1,64 @@
+<td>圈存绑定标志：</td>
+<td><SELECT NAME=qcBindFlag onchange='javascript:bindChanged()' style='width:132;margin: ' >
+<option value=''></option>
+<option value=0>未绑定</option>
+<option value=1>从账户圈存</option>
+<option value=2>从银行卡圈存</option>
+</SELECT>
+</td> 
+
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+<title>javascript select options text value</title>
+<meta name="keywords" content="javascript select options text value add modify delete set">
+<meta name="description" content="javascript select options text value add modify delete set">
+<script language="javascript">
+<!--
+// Author: i@lxl.cn
+// Modify: i@cnlei.com
+function watch_ini(){ // 初始
+for(var i=0; i<arguments.length; i++){
+  var oOption=new Option(arguments[i],arguments[i]);
+  document.getElementById("MySelect").options[i]=oOption;
+}
+}
+function watch_add(f){ // 增加
+  var oOption=new Option(f.word.value,f.word.value);
+  f.keywords.options[f.keywords.length]=oOption;
+}
+function watch_sel(f){ // 编辑
+f.word.value = f.keywords.options[f.keywords.selectedIndex].text;
+}
+function watch_mod(f){ // 修改
+f.keywords.options[f.keywords.selectedIndex].text = f.word.value;
+}
+function watch_del(f){ // 删除
+f.keywords.options.remove(f.keywords.selectedIndex);
+}
+function watch_set(f){ // 保存
+var set = "";
+for(var i=0; i<f.keywords.length; i++){
+set += f.keywords.options[i].text + ";";
+}
+confirm(set);
+}
+//-->
+</script>
+</head>
+<body>
+<form name="watch" method="post" action="">
+<select id="MySelect" name="keywords" size="10" onchange="watch_sel(this.form)"></select><br>
+<script language="javascript">
+<!--
+watch_ini("我","你","?","他","她","它","尔"); // 初始关键词
+//-->
+</script>
+<input type="text" name="word" /><br />
+<input type="button" value="增加" onclick="watch_add(this.form);" />
+<input type="button" value="修改" onclick="watch_mod(this.form);" />
+<input type="button" value="删除" onclick="watch_del(this.form);" />
+<input type="button" value="保存" onclick="watch_set(this.form);" />
+</form>
+</body>
+</html>

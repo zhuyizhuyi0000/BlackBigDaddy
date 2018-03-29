@@ -1,0 +1,17 @@
+  <AllTestCases>
+    <StepParametersFilePath>RegisterwithInviteCodeParameters.xml</StepParametersFilePath>
+    <StepAssembly>com.baidu.gameqa.iat.steps.member.</StepAssembly>
+    <StepGroup>RegisterwithInviteCode</StepGroup>
+     <TestCase ID="Test01" Name="RegisterGameUser_success">
+       <Step StepName="RegisterGameUser_success" StepParameterID="Test01"/>
+    </TestCase>
+	<TestCase ID="Test02" Name="RegisterGameUser_NoInviteCode">
+       <Step StepName="RegisterGameUser_NoInviteCode" StepParameterID="Test02"/>
+    </TestCase>
+	<TestCase ID="Test03" Name="RegisterGameUser_existeduser">
+       <Step StepName="RegisterGameUser_existeduser" StepParameterID="Test03"/>
+    </TestCase>
+	<TestCase ID="Test04" Name="RegisterGameUser_differentrepass">
+       <Step StepName="RegisterGameUser_differentrepass" StepParameterID="Test04"/>
+    </TestCase>
+  </AllTestCases>

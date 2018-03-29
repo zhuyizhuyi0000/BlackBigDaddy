@@ -1,0 +1,42 @@
+<AllStepParameters>
+    <StepParameter ID="deleteData" Name="deleteData">
+      <ConnectionString>jdbc:mysql://10.48.16.43:4429/game</ConnectionString>
+      <CommandText>DELETE FROM `game`.`user_youxi_record_55` WHERE `userId` = 155 and `gameId` = 892 and `serverId` = '123'</CommandText>
+      <Parameters>
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/>  
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="selectData" Name="selectData">
+      <ConnectionString>jdbc:mysql://10.48.16.43:4429/game</ConnectionString>
+      <CommandText>SELECT count(*) as count FROM `game`.`user_youxi_record_55` WHERE `userId` = 155 and `gameId` = 892 and `serverId` = '123'</CommandText>
+      <Parameters>
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/>  
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="ff14_history_post" Name="ff14_history_post">
+      <ConnectionString></ConnectionString>
+      <CommandText></CommandText>
+      <Parameters>
+      <parameter Key="url" Value="http://youxi.baidu.com/ff14_history.xhtml"/>
+      <parameter Key="httpmethod" Value="POST"/>
+      <parameter Key="$appId" Value="100001900"/>
+      <parameter Key="$thirdId" Value="155"/>
+      <parameter Key="$areaId" Value="123"/>
+      <parameter Key="$signature" Value=""/>
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="ff14_history_get" Name="ff14_history_get">
+      <ConnectionString></ConnectionString>
+      <CommandText></CommandText>
+      <Parameters>
+      <parameter Key="url" Value="http://youxi.baidu.com/ff14_history.xhtml"/>
+      <parameter Key="httpmethod" Value="GET"/>
+      <parameter Key="$appId" Value="100001900"/>
+      <parameter Key="$thirdId" Value="155"/>
+      <parameter Key="$areaId" Value="123"/>
+      <parameter Key="$signature" Value=""/>
+     </Parameters>
+    </StepParameter>
+  </AllStepParameters>

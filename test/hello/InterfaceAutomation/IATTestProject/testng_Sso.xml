@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+      <class name="com.baidu.gameqa.generation.Sso__loginQa"/>
+      <class name="com.baidu.gameqa.generation.Sso__innerLoginQa"/>
+      <class name="com.baidu.gameqa.generation.LoginTestCase"/>
+      <class name="com.baidu.gameqa.generation.InnerLoginTestCase"/>
+      <class name="com.baidu.gameqa.generation.AuthLoginTestCase"/>
+      <class name="com.baidu.gameqa.sso.GetLoginLockStatusTestCase"/>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,47 @@
+<!-- 九鼎客户端LogM接口多步TestCase.xml -->
+<AllTestCases>
+	<StepParametersFilePath>JDLogMStepParameters.xml
+	</StepParametersFilePath>
+	<StepAssembly>com.baidu.gameqa.iat.steps.sso.</StepAssembly>
+	<StepGroup>JDLogM_QA</StepGroup>
+	
+	<!-- 九鼎客户端LogM接口-case1-passport账号-LogM接口 -->
+	<TestCase ID="JDLogM_QACase01" Name="JDLogM01">
+		<Step StepName="getParameter" StepParameterID="JDLogM_QACase1_Parameters" />
+		<Step StepName="getDesString" StepParameterID="JDLogM_QACase1_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDLogM_QACase1_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDLogM_QACase1_Parameters" />
+		<Step StepName="testLogMPass" StepParameterID="JDLogM_QACase1_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDLogM_QACase1_Parameters" />
+	</TestCase>
+	
+	<!-- 九鼎客户端LogM接口-case2-快推账号-LogM接口 -->
+	<TestCase ID="JDLogM_QACase02" Name="JDLogM02">
+		<Step StepName="getParameter" StepParameterID="JDLogM_QACase2_Parameters" />
+		<Step StepName="getDesString" StepParameterID="JDLogM_QACase2_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDLogM_QACase2_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDLogM_QACase2_Parameters" />
+		<Step StepName="testLogMQuick" StepParameterID="JDLogM_QACase2_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDLogM_QACase2_Parameters" />
+	</TestCase>
+	
+	<!-- 九鼎客户端LogM接口-case3-logM接口采用错误的userId参数 -->
+	<TestCase ID="JDLogM_QACase03" Name="JDLogM03">
+		<Step StepName="getParameter" StepParameterID="JDLogM_QACase3_Parameters" />
+		<Step StepName="getDesString" StepParameterID="JDLogM_QACase3_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDLogM_QACase3_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDLogM_QACase3_Parameters" />
+		<Step StepName="testLogMWithWrongUid" StepParameterID="JDLogM_QACase3_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDLogM_QACase3_Parameters" />
+	</TestCase>
+	
+	<!-- 九鼎客户端LogM接口-case4-logM接口采用错误的loginToken参数 -->
+	<TestCase ID="JDLogM_QACase04" Name="JDLogM04">
+		<Step StepName="getParameter" StepParameterID="JDLogM_QACase4_Parameters" />
+		<Step StepName="getDesString" StepParameterID="JDLogM_QACase4_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDLogM_QACase4_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDLogM_QACase4_Parameters" />
+		<Step StepName="testLogMWithWrongToken" StepParameterID="JDLogM_QACase4_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDLogM_QACase4_Parameters" />
+	</TestCase>
+</AllTestCases>

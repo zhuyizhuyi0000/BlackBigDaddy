@@ -1,0 +1,37 @@
+<AllStepParameters>
+	<StepParameter ID="UserBindEmailPhoneCaseParameters" Name="bindEmailPhoneParameters">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="loginName" Value="bbs" />
+			<parameter Key="password" Value="123" />
+			<parameter Key="url" Value="http://youxi.baidu.com/sso/login/login.json" />
+			
+			<parameter Key="giftPayCheckUrl" Value="http://youxi.baidu.com/i/ajax_gift_product.xhtml" />
+			<parameter Key="c" Value="check" />
+			<parameter Key="id" Value="1" />
+			<parameter Key="count" Value="1" />
+			
+			<parameter Key="assertType" Value="contains" />
+			<parameter Key="expectedResult" Value="token" />
+		</Parameters>
+	</StepParameter>
+	
+	<StepParameter ID="UserNoBindEmailPhoneCaseParameters" Name="noBindEmailPhoneParameters">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="loginName" Value="libaotest" />
+			<parameter Key="password" Value="123" />
+			<parameter Key="url" Value="http://youxi.baidu.com/sso/login/login.json" />
+			
+			<parameter Key="giftPayCheckUrl" Value="http://youxi.baidu.com/i/ajax_gift_product.xhtml" />
+			<parameter Key="c" Value="check" />
+			<parameter Key="id" Value="1" />
+			<parameter Key="count" Value="1" />
+			
+			<parameter Key="assertType" Value="contains" />
+			<parameter Key="expectedResult" Value='"message":"用户需绑定邮箱","result":"-1"' />
+		</Parameters>
+	</StepParameter>
+</AllStepParameters>

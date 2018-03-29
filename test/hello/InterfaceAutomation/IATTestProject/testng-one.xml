@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="[Default suite]">
+  <test name="Default test">
+    <classes>
+      <class name="com.baidu.gameqa.iat.TestProject.RechargeTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="Test05"/>
+          <include name="Test03"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="beforeSuite"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.baidu.gameqa.iat.TestProject.RechargeTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+      <class name="com.baidu.gameqa.generation.CSAdmin__ajax_admin"/>
+      <class name="com.baidu.gameqa.generation.CSAdmin__Sheet3"/>
+      <class name="com.baidu.gameqa.generation.CSAdmin__work_task"/>
+      <class name="com.baidu.gameqa.generation.DoubiApi__ajax_balance"/>
+      <class name="com.baidu.gameqa.generation.DoubiApi__doubi_pay_getEncryptTimeStamp"/>
+      <class name="com.baidu.gameqa.generation.DoubiApi__doubi_pay_payResultByOrder"/>
+      <class name="com.baidu.gameqa.generation.DoubiApi__Sheet1"/>
+      <class name="com.baidu.gameqa.generation.DoubiPayTestCase"/>
+      <class name="com.baidu.gameqa.generation.gameuser__clientsso_beta"/>
+      <class name="com.baidu.gameqa.generation.gameuser__clientsso_sandbox"/>
+      <class name="com.baidu.gameqa.generation.gameuser__userorder"/>
+      <class name="com.baidu.gameqa.generation.Game__ajax_game_rank"/>
+      <class name="com.baidu.gameqa.generation.Game__ajax_recommend_game"/>
+      <class name="com.baidu.gameqa.generation.Game__ajax_search"/>
+      <class name="com.baidu.gameqa.generation.Game__ajax_youxi"/>
+      <class name="com.baidu.gameqa.generation.Game__game_recommend"/>
+      <class name="com.baidu.gameqa.generation.Game__server_list"/>
+      <class name="com.baidu.gameqa.generation.Game__server_list_not_login"/>
+      <class name="com.baidu.gameqa.generation.Game__server_select"/>
+      <class name="com.baidu.gameqa.generation.GoDoubi__createorder"/>
+      <class name="com.baidu.gameqa.generation.GoDoubi__loadgame"/>
+      <class name="com.baidu.gameqa.generation.GoDoubi__loadserver"/>
+      <class name="com.baidu.gameqa.generation.GoDoubi__queryuser"/>
+      <class name="com.baidu.gameqa.generation.GoDoubi__query_myhistory_order"/>
+      <class name="com.baidu.gameqa.generation.GoDoubi__validaterole"/>
+      <class name="com.baidu.gameqa.generation.Login__login"/>
+      <class name="com.baidu.gameqa.generation.MemberDuanyou__backup"/>
+      <class name="com.baidu.gameqa.generation.MemberDuanyou__duanyou"/>
+      <class name="com.baidu.gameqa.generation.MemberSignTestCase"/>
+      <class name="com.baidu.gameqa.generation.MemberSign__ajaxAdList"/>
+      <class name="com.baidu.gameqa.generation.MemberSign__ajaxMyScoreDetail"/>
+      <class name="com.baidu.gameqa.generation.MemberSign__member_sign"/>
+      <class name="com.baidu.gameqa.generation.MemberSign__Sheet2"/>
+      <class name="com.baidu.gameqa.generation.MemberSign__Sheet3"/>
+      <class name="com.baidu.gameqa.generation.MemberStore__store_kind"/>
+      <class name="com.baidu.gameqa.generation.Member__ajaxAdList"/>
+      <class name="com.baidu.gameqa.generation.Member__ajaxMyScoreDetail"/>
+      <class name="com.baidu.gameqa.generation.Member__duanyou"/>
+      <class name="com.baidu.gameqa.generation.Member__memberInfo"/>
+      <class name="com.baidu.gameqa.generation.Member__order_queryHistory"/>
+      <class name="com.baidu.gameqa.generation.Member__sign"/>
+      <class name="com.baidu.gameqa.generation.Member__store_kind"/>
+      <class name="com.baidu.gameqa.generation.Member__Task_InviteCode"/>
+      <class name="com.baidu.gameqa.generation.Message__im_msgNum"/>
+      <class name="com.baidu.gameqa.generation.Message__iyouxi_ajax_message_notice"/>
+      <class name="com.baidu.gameqa.generation.Message__iyouxi_ajax_user_message"/>
+      <class name="com.baidu.gameqa.generation.Message__querySysMessage"/>
+      <class name="com.baidu.gameqa.generation.Other__appAds"/>
+      <class name="com.baidu.gameqa.generation.Recharge__reg_order"/>
+      <class name="com.baidu.gameqa.generation.RegisterwithInviteCodeTestCase"/>
+      <class name="com.baidu.gameqa.generation.RegisterwithInviteCodeTestCase.java"/>
+      <class name="com.baidu.gameqa.generation.RegisterwithInviteCodeTestCase.java"/>
+      <class name="com.baidu.gameqa.generation.RegisterwithInviteCodeTestCase.java"/>
+      <class name="com.baidu.gameqa.generation.Register__reg"/>
+      <class name="com.baidu.gameqa.generation.Register__reg_check"/>
+      <class name="com.baidu.gameqa.generation.user__ajax_user"/>
+      <class name="com.baidu.gameqa.generation.user__ajax_user_center"/>
+    </classes>
+  </test>
+</suite>

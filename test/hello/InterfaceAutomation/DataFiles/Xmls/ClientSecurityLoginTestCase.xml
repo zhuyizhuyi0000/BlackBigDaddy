@@ -1,0 +1,322 @@
+<!-- 客户端加密登录接口多步TestCase.xml -->
+<AllTestCases>
+	<StepParametersFilePath>ClientSecurityLogin_RD_StepParameters.xml
+	</StepParametersFilePath>
+	<StepAssembly>com.baidu.gameqa.iat.steps.sso.</StepAssembly>
+	<StepGroup>ClientSecurityLogin</StepGroup>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case1 -->
+	<TestCase ID="ClientSecurityLogin_Case1" Name="ClientSecurityLogin01">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase1_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase1_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase1_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase1_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase1_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case2 -->
+	<TestCase ID="ClientSecurityLogin_Case2" Name="ClientSecurityLogin02">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase2_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase2_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase2_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase2_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase2_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case3 -->
+	<TestCase ID="ClientSecurityLogin_Case3" Name="ClientSecurityLogin03">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase3_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase3_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase3_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase3_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase3_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case4 -->
+	<TestCase ID="ClientSecurityLogin_Case4" Name="ClientSecurityLogin04">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase4_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase4_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase4_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase4_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase4_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case5 -->
+	<TestCase ID="ClientSecurityLogin_Case5" Name="ClientSecurityLogin05">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase5_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase5_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase5_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase5_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase5_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case6 -->
+	<TestCase ID="ClientSecurityLogin_Case6" Name="ClientSecurityLogin06">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase6_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase6_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase6_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase6_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase6_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case7 -->
+	<TestCase ID="ClientSecurityLogin_Case7" Name="ClientSecurityLogin07">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase7_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase7_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase7_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase7_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase7_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case8 -->
+	<TestCase ID="ClientSecurityLogin_Case8" Name="ClientSecurityLogin08">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase8_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase8_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase8_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase8_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase8_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case9 -->
+	<TestCase ID="ClientSecurityLogin_Case9" Name="ClientSecurityLogin09">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase9_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase9_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase9_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase9_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase9_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case10 -->
+	<TestCase ID="ClientSecurityLogin_Case10" Name="ClientSecurityLogin10">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase10_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase10_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase10_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase10_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase10_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case11 -->
+	<TestCase ID="ClientSecurityLogin_Case11" Name="ClientSecurityLogin11">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase11_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase11_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase11_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase11_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase11_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case12 -->
+	<TestCase ID="ClientSecurityLogin_Case12" Name="ClientSecurityLogin12">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase12_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase12_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase12_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase12_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase12_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case13 -->
+	<TestCase ID="ClientSecurityLogin_Case13" Name="ClientSecurityLogin13">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase13_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase13_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase13_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase13_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase13_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case14 -->
+	<TestCase ID="ClientSecurityLogin_Case14" Name="ClientSecurityLogin14">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase14_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase14_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase14_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase14_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase14_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case15 -->
+	<TestCase ID="ClientSecurityLogin_Case15" Name="ClientSecurityLogin15">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase15_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase15_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase15_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase15_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase15_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case16 -->
+	<TestCase ID="ClientSecurityLogin_Case16" Name="ClientSecurityLogin16">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase16_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase16_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase16_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase16_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase16_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case17 -->
+	<TestCase ID="ClientSecurityLogin_Case17" Name="ClientSecurityLogin17">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase17_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase17_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase17_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase17_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase17_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case18 -->
+	<TestCase ID="ClientSecurityLogin_Case18" Name="ClientSecurityLogin18">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase18_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase18_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase18_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase18_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase18_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case19 -->
+	<TestCase ID="ClientSecurityLogin_Case19" Name="ClientSecurityLogin19">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase19_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase19_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase19_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase19_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase19_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case20 -->
+	<TestCase ID="ClientSecurityLogin_Case20" Name="ClientSecurityLogin20">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase20_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase20_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase20_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase20_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase20_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case21 -->
+	<TestCase ID="ClientSecurityLogin_Case21" Name="ClientSecurityLogin21">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase21_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase21_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase21_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase21_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase21_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case22 -->
+	<TestCase ID="ClientSecurityLogin_Case22" Name="ClientSecurityLogin22">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase22_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase22_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase22_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase22_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase22_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case23 -->
+	<TestCase ID="ClientSecurityLogin_Case23" Name="ClientSecurityLogin23">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase23_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase23_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase23_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase23_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase23_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case24 -->
+	<TestCase ID="ClientSecurityLogin_Case24" Name="ClientSecurityLogin24">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase24_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase24_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase24_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase24_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase24_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case25 -->
+	<TestCase ID="ClientSecurityLogin_Case25" Name="ClientSecurityLogin25">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase25_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase25_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase25_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase25_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase25_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case26 -->
+	<TestCase ID="ClientSecurityLogin_Case26" Name="ClientSecurityLogin26">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase26_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase26_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase26_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase26_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase26_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case27 -->
+	<TestCase ID="ClientSecurityLogin_Case27" Name="ClientSecurityLogin27">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase27_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase27_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase27_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase27_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase27_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case28 -->
+	<TestCase ID="ClientSecurityLogin_Case28" Name="ClientSecurityLogin28">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase28_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase28_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase28_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase28_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase28_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case29 -->
+	<TestCase ID="ClientSecurityLogin_Case29" Name="ClientSecurityLogin29">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase29_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase29_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase29_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase29_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase29_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case30 -->
+	<TestCase ID="ClientSecurityLogin_Case30" Name="ClientSecurityLogin30">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase30_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase30_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase30_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase30_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase30_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case31 -->
+	<TestCase ID="ClientSecurityLogin_Case31" Name="ClientSecurityLogin31">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase31_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase31_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase31_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase31_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase31_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case32 -->
+	<TestCase ID="ClientSecurityLogin_Case32" Name="ClientSecurityLogin32">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase32_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase32_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase32_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase32_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase32_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case33 -->
+	<TestCase ID="ClientSecurityLogin_Case33" Name="ClientSecurityLogin33">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase33_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase33_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase33_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase33_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase33_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case34 -->
+	<TestCase ID="ClientSecurityLogin_Case34" Name="ClientSecurityLogin34">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase34_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase34_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase34_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase34_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase34_Parameters" />
+	</TestCase>
+	
+	<!--客户端加密登录接口/sso/client/security/login.json-case35 -->
+	<TestCase ID="ClientSecurityLogin_Case35" Name="ClientSecurityLogin35">
+		<Step StepName="getParameter" StepParameterID="ClientSecurityLoginCase35_Parameters" />
+		<Step StepName="getDescryString" StepParameterID="ClientSecurityLoginCase35_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="ClientSecurityLoginCase35_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="ClientSecurityLoginCase35_Parameters" />
+		<Step StepName="assertResult" StepParameterID="ClientSecurityLoginCase35_Parameters" />
+	</TestCase>
+</AllTestCases>

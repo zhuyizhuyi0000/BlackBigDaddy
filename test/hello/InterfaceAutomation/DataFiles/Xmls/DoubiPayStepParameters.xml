@@ -1,0 +1,10 @@
+<AllStepParameters>
+    <StepParameter ID="Test01" Name="fdsfsdfsd" >
+      <ConnectionString>FDFD</ConnectionString>
+      <CommandText>fdsfdsfsd</CommandText>
+      <Parameters>
+      <parameter Key="url" Value="http://db.baidu.com/doubi_pay.xhtml?c=getEncryptTimeStamp&amp;productNo=8888&amp;userId=104170454&amp;charset=1&amp;signMethod=1&amp;timeStamp=20131112142225&amp;outputFormat=1&amp;orderId=test0000001&amp;sign=38D2955F04FD440DDAA2BC2058A9F728"/>
+      <parameter Key="httpmethod" Value="GET"/>
+     </Parameters>
+    </StepParameter>
+</AllStepParameters>

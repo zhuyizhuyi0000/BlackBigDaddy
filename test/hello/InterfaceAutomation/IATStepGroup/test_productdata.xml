@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="giftdata">
+	<test name="GiftDataProvider">
+		<parameter name="giftDataGeneration" value="BusinessDataModule"></parameter>
+		<parameter name="giftParameterSetKey" value="userLimit#gameName#gameId"></parameter>
+		<parameter name="giftParameterSetValue"
+			value='[{"code":"userBindEmail","code":"userBindPhone","code":"userAmount","min":"10"}]#大闹天宫#495'></parameter>
+		<classes>
+			<class name="com.baidu.gameqa.generation.GiftProductData">
+			</class>
+		</classes>
+	</test>
+</suite>

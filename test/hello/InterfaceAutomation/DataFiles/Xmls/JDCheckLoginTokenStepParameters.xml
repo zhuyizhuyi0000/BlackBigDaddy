@@ -1,0 +1,74 @@
+<!-- 九鼎客户端checkLoginToken接口多步测试参数xml -->
+<AllStepParameters>
+	<!-- QA环境九鼎checkLoginToken接口 -case1 parameters-->
+	<StepParameter ID="JDCheckLoginToken_QACase1_Parameters" Name="JDCheckLoginToken_Case1_Parameters">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="key_qa_url" Value="http://10.48.55.37:8050/sso/client/securityKey.json" />
+			<parameter Key="key_httpmethod" Value="GET" />
+			
+			<parameter Key="loginName" Value="gaojikefu" />
+			<parameter Key="password" Value="123" />
+			
+			<parameter Key="login_qa_url" Value="http://10.48.55.37:8050/sso/client/login.json" />
+			<parameter Key="login_httpmethod" Value="POST" />
+			<parameter Key="login_gameId" Value="478" />
+			
+			<parameter Key="login_token_qa_url" Value="http://10.48.55.37:8050/sso/client/checkLoginToken.json" />
+			<parameter Key="login_token_httpmethod" Value="POST" />
+			
+			<parameter Key="expectedResult" Value='{"status":200,"needVcode":0,"message":"验证通过","body":null}' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+	
+	<!-- QA环境九鼎checkLoginToken接口 -case2 parameters -->
+	<StepParameter ID="JDCheckLoginToken_QACase2_Parameters" Name="JDCheckLoginToken_Case2_Parameters">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="key_qa_url" Value="http://10.48.55.37:8050/sso/client/securityKey.json" />
+			<parameter Key="key_httpmethod" Value="GET" />
+			
+			<parameter Key="loginName" Value="gaojikefu" />
+			<parameter Key="password" Value="123" />
+			
+			<parameter Key="login_qa_url" Value="http://10.48.55.37:8050/sso/client/login.json" />
+			<parameter Key="login_httpmethod" Value="POST" />
+			<parameter Key="login_gameId" Value="478" />
+			
+			<parameter Key="login_token_qa_url" Value="http://10.48.55.37:8050/sso/client/checkLoginToken.json" />
+			<parameter Key="login_token_httpmethod" Value="POST" />
+			<parameter Key="userId" Value="1252071000" />
+			
+			<parameter Key="expectedResult" Value='{"status":403,"needVcode":0,"message":"访问拒绝！","body":null}' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+	
+	<!-- QA环境九鼎checkLoginToken接口 -case3 parameters -->
+	<StepParameter ID="JDCheckLoginToken_QACase3_Parameters" Name="JDCheckLoginToken_Case3_Parameters">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="key_qa_url" Value="http://10.48.55.37:8050/sso/client/securityKey.json" />
+			<parameter Key="key_httpmethod" Value="GET" />
+			
+			<parameter Key="loginName" Value="gaojikefu" />
+			<parameter Key="password" Value="123" />
+			
+			<parameter Key="login_qa_url" Value="http://10.48.55.37:8050/sso/client/login.json" />
+			<parameter Key="login_httpmethod" Value="POST" />
+			<parameter Key="login_gameId" Value="478" />
+			
+			<parameter Key="login_token_qa_url" Value="http://10.48.55.37:8050/sso/client/checkLoginToken.json" />
+			<parameter Key="login_token_httpmethod" Value="POST" />
+			<parameter Key="loginToken" Value="6511506c5c0041fbaa8ae806a96c5daa" />
+			
+			<parameter Key="expectedResult" Value='{"status":403,"needVcode":0,"message":"访问拒绝！","body":null}' />
+			<parameter Key="assertType" Value="contains" />
+		</Parameters>
+	</StepParameter>
+	
+</AllStepParameters>

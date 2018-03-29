@@ -1,0 +1,15 @@
+  <AllTestCases>
+    <StepParametersFilePath>MemberStoreSaveAddrStepParameters.xml</StepParametersFilePath>
+    <StepAssembly>com.baidu.gameqa.iat.steps.member.</StepAssembly>
+    <StepGroup>MemberStoreSaveAddr</StepGroup>
+    <TestCase ID="TestCase01" Name="member_store_pay_saveaddress_pass">
+       <Step StepName="setCookies" StepParameterID="PayCookie" StepAssembly="com.baidu.gameqa.iat.steps.common." StepGroup="SetupSteps" StepParametersFilePath="SetupParameters.xml"/>
+       <Step StepName="payGift" StepParameterID="payGift"/>
+       <Step StepName="saveAddress_ok_200" StepParameterID="Parameter01"/>
+    </TestCase>
+	<TestCase ID="TestCase02" Name="member_store_pay_saveaddress_noinput">
+       <Step StepName="setCookies" StepParameterID="PayCookie" StepAssembly="com.baidu.gameqa.iat.steps.common." StepGroup="SetupSteps" StepParametersFilePath="SetupParameters.xml"/>
+       <Step StepName="payGift" StepParameterID="payGift"/>
+       <Step StepName="saveAddress_ok_noinput" StepParameterID="Parameter02"/>
+    </TestCase>
+  </AllTestCases>

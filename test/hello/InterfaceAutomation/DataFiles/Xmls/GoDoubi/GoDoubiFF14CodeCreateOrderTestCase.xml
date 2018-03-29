@@ -1,0 +1,28 @@
+  <AllTestCases>
+     <StepParametersFilePath>GoDoubi/GoDoubiFF14CodeCreateOrderStepParameters.xml</StepParametersFilePath>
+    <StepAssembly>com.baidu.gameqa.iat.steps.godoubi.</StepAssembly>
+    <StepGroup>GoDoubiFF14CodeCreateOrder</StepGroup>
+     <TestCase ID="ff14Codecreateorder_case01" Name="ff14Codecreateorder_normal">
+       <Step StepName="step1_ff14CodeCreateOrder" StepParameterID="GoDoubiFF14CodeCreateOrder"/>
+       <Step StepName="step2_ff14CodeExpectedResult" StepParameterID="GoDoubiFF14CodeExpectedResult"/>
+       <Step StepName="step3_ff14CodeAssert" StepParameterID="GoDoubiFF14CodeExpectedResult"/>
+    </TestCase>
+    <TestCase ID="ff14Codecreateorder_case02" Name="ff14Codecreateorder_wrong_para">
+       <Step StepName="step1_ff14CodeCreateOrder_wrong_para" StepParameterID="GoDoubiFF14CodeCreateOrder"/>
+    </TestCase>
+      <TestCase ID="ff14Codecreateorder_case03" Name="ff14Codecreateorder_wrong_amount">
+       <Step StepName="step1_ff14CodeCreateOrder_wrong_amount" StepParameterID="GoDoubiFF14CodeCreateOrder"/>
+    </TestCase> 
+      <TestCase ID="ff14Codecreateorder_case04" Name="ff14Codecreateorder_wrong_product">
+       <Step StepName="step1_ff14CodeCreateOrder_wrong_product" StepParameterID="GoDoubiFF14CodeCreateOrder"/>
+    </TestCase> 
+    
+    <TestCase ID="ff14Codecreateorder_case05" Name="ff14Codecreateorder_wrong_sign">
+       <Step StepName="step1_ff14CodeCreateOrder_wrong_sign" StepParameterID="GoDoubiFF14CodeCreateOrder"/>
+    </TestCase> 
+    <TestCase ID="ff14Codecreateorder_case06" Name="ff14Codecreateorder_quickUser">
+       <Step StepName="step1_ff14CodeCreateOrder_quickUser" StepParameterID="GoDoubiFF14CodeCreateOrder"/>
+       <Step StepName="step2_ff14CodeExpectedResult" StepParameterID="GoDoubiFF14CodeExpectedResult"/>
+       <Step StepName="step3_ff14CodeAssert_quickUser" StepParameterID="GoDoubiFF14CodeExpectedResult"/>
+    </TestCase> 
+  </AllTestCases>

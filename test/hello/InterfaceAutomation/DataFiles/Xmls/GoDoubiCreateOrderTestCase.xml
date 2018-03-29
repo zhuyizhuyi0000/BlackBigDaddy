@@ -1,0 +1,12 @@
+  <AllTestCases>
+    <StepParametersFilePath>GoDoubiCreateOrderStepParameters.xml</StepParametersFilePath>
+    <StepAssembly>com.baidu.gameqa.iat.steps.godoubi.</StepAssembly>
+    <StepGroup>GoDoubiCreateOrder</StepGroup>
+     <TestCase ID="createorder_case01" Name="createorder">
+       <Step StepName="Step1_CreateOrder" StepParameterID="GoDoubiCreateOrder"/>
+       <Step StepName="Step2_ExpectedResult" StepParameterID="ExpectedResult"/>
+       <Step StepName="Step3_Assert" StepParameterID="GoDoubiCreateOrder"/>
+    </TestCase>
+    
+   
+  </AllTestCases>

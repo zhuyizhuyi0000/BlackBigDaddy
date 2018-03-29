@@ -1,0 +1,17 @@
+  <AllTestCases>
+    <StepParametersFilePath>FF14/FF14HistoryStepParameters.xml</StepParametersFilePath>
+    <StepAssembly>com.baidu.gameqa.iat.steps.FF14.</StepAssembly>
+    <StepGroup>FF14HistorySteps</StepGroup>
+    <TestCase ID="ff14_history_post" Name="ff14_history_post">
+      <Step StepName="deleteData" StepParameterID="deleteData"/>
+      <Step StepName="doFF14History" StepParameterID="ff14_history_post"/>
+      <Step StepName="assertResponse" StepParameterID="ff14_history_post"/>
+      <Step StepName="assertData" StepParameterID="selectData"/>
+    </TestCase>
+    <TestCase ID="ff14_history_get" Name="ff14_history_post">
+      <Step StepName="deleteData" StepParameterID="deleteData"/>
+      <Step StepName="doFF14History" StepParameterID="ff14_history_get"/>
+      <Step StepName="assertResponse" StepParameterID="ff14_history_get"/>
+      <Step StepName="assertData" StepParameterID="selectData"/>
+    </TestCase>
+  </AllTestCases>

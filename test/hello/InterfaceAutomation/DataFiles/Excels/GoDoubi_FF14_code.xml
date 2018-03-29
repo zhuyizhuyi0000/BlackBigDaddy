@@ -1,0 +1,29 @@
+<AllStepParameters>
+    
+    <StepParameter ID="loadProduct" Name="loadProduct" >
+      <ConnectionString></ConnectionString>
+      <CommandText></CommandText>
+      <Parameters>
+      <parameter Key="conn_iyouxi" Value="jdbc:mysql://10.48.16.43:5508/game"/>	
+      <parameter Key="select_youxi_gift_product" Value="SELECT giftContent,personLimitNum,middleImagePath,bigImagePath,smallImagePath,totalNum,gotNum,price,giftName FROM `youxi_gift_product` where id = 75"/>
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/>  
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="loadPlatUser" Name="loadPlatUser" >
+      <ConnectionString></ConnectionString>
+      <CommandText></CommandText>
+      <Parameters>
+      <parameter Key="gameMsg" Value="《最终幻想14》是拥有27年历史、创下1亿套销量的全球经典游戏品牌最终幻想系列的最新作品，由Square Enix开发、盛大游戏代理运营。游戏采用顶尖的夜光引擎........."/>
+      <parameter Key="gamePage" Value="http://p2.youxi.bdimg.com/site/images/game-icons/228x157/892.png"/>  
+      <parameter Key="platLogo" Value="http://p2.youxi.bdimg.com/site/v5/images/baidugamelogo_140_65.png"/>
+      <parameter Key="ratioDesc" Value="1元=1点券"/>  
+      <parameter Key="platDesc" Value="百度游戏-为亿万玩家传递快乐！"/>  
+      <parameter Key="code" Value="0"/>  
+      <parameter Key="vipStatus" Value="1"/>
+      <parameter Key="vipLevel" Value="2"/>
+     </Parameters>
+    </StepParameter>
+
+    
+</AllStepParameters>

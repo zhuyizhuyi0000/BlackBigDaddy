@@ -1,0 +1,62 @@
+<!-- 短信登录发送验证码接口-TestCase -->
+<AllTestCases>
+	<StepParametersFilePath>SmsLogin_RD_StepParameters.xml</StepParametersFilePath>
+	<StepAssembly>com.baidu.gameqa.iat.steps.sso.</StepAssembly>
+	<StepGroup>SecuritySendVcode</StepGroup>
+	
+	<!-- 短信登录发送验证码-case1-正确手机号发送 -->
+	<TestCase ID="SendVcode_Case01" Name="SendVcode01">
+		<Step StepName="getParameter" StepParameterID="SendVcode_Case01_Parameters" />
+		<Step StepName="getVcode" StepParameterID="SendVcode_Case01_Parameters" />
+		<Step StepName="assertResult" StepParameterID="SendVcode_Case01_Parameters" />
+	</TestCase>
+	
+	<!-- 短信登录发送验证码-case2-手机号格式非法发送 -->
+	<TestCase ID="SendVcode_Case02" Name="SendVcode02">
+		<Step StepName="getParameter" StepParameterID="SendVcode_Case02_Parameters" />
+		<Step StepName="getVcode" StepParameterID="SendVcode_Case02_Parameters" />
+		<Step StepName="assertResult" StepParameterID="SendVcode_Case02_Parameters" />
+	</TestCase>
+	
+	<!-- 短信登录发送验证码-case3-手机号为空 -->
+	<TestCase ID="SendVcode_Case03" Name="SendVcode03">
+		<Step StepName="getParameter" StepParameterID="SendVcode_Case03_Parameters" />
+		<Step StepName="getVcode" StepParameterID="SendVcode_Case03_Parameters" />
+		<Step StepName="assertResult" StepParameterID="SendVcode_Case03_Parameters" />
+	</TestCase>
+	
+	<!-- 短信登录发送验证码-case4-带正确clientIp参数 -->
+	<TestCase ID="SendVcode_Case04" Name="SendVcode04">
+		<Step StepName="getParameter" StepParameterID="SendVcode_Case04_Parameters" />
+		<Step StepName="getVcodeWithClientIp" StepParameterID="SendVcode_Case04_Parameters" />
+		<Step StepName="assertResult" StepParameterID="SendVcode_Case04_Parameters" />
+	</TestCase>
+	
+	<!-- 短信登录发送验证码-case5-带非法clientIp参数 -->
+	<TestCase ID="SendVcode_Case05" Name="SendVcode05">
+		<Step StepName="getParameter" StepParameterID="SendVcode_Case05_Parameters" />
+		<Step StepName="getVcodeWithClientIp" StepParameterID="SendVcode_Case05_Parameters" />
+		<Step StepName="assertResult" StepParameterID="SendVcode_Case05_Parameters" />
+	</TestCase>
+	
+	<!-- 短信登录发送验证码-case6-clientIp参数为空 -->
+	<TestCase ID="SendVcode_Case06" Name="SendVcode06">
+		<Step StepName="getParameter" StepParameterID="SendVcode_Case06_Parameters" />
+		<Step StepName="getVcodeWithClientIp" StepParameterID="SendVcode_Case06_Parameters" />
+		<Step StepName="assertResult" StepParameterID="SendVcode_Case06_Parameters" />
+	</TestCase>
+	
+	<!-- 短信登录发送验证码-case7- 带pid参数 -->
+	<TestCase ID="SendVcode_Case07" Name="SendVcode07">
+		<Step StepName="getParameter" StepParameterID="SendVcode_Case07_Parameters" />
+		<Step StepName="getVcodeWithPid" StepParameterID="SendVcode_Case07_Parameters" />
+		<Step StepName="assertResult" StepParameterID="SendVcode_Case07_Parameters" />
+	</TestCase>
+	
+	<!-- 短信登录发送验证码-case8- pid参数为空 -->
+	<TestCase ID="SendVcode_Case08" Name="SendVcode08">
+		<Step StepName="getParameter" StepParameterID="SendVcode_Case08_Parameters" />
+		<Step StepName="getVcodeWithPid" StepParameterID="SendVcode_Case08_Parameters" />
+		<Step StepName="assertResult" StepParameterID="SendVcode_Case08_Parameters" />
+	</TestCase>
+</AllTestCases>

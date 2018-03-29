@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>userType.html</title>
+
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+		<meta http-equiv="description" content="this is my page">
+		<meta http-equiv="content-type" content="text/html; charset=gb2312">
+
+		<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style>
+#tooltable tbody tr th,td{font-size:12px ; width:150px} 
+</style>
+	</head>
+
+	<body>
+		
+		
+
+<h2>订单查询修改<br></h2>
+<script type="text/javascript">
+		function submitForm(){
+			document.userTypeForm.submit();
+		}
+	</script>
+<form id="userTypeForm" name="userTypeForm" action="http://localhost:8080/testqat/chargeorder.jsp" method="post">
+
+<div class="searchbox">数据库选择：  
+<SELECT name="databaseNum">
+<option value=0>请选择数据库</option>
+<option value=1>亭老板强烈要加的beta</option>
+<option value=2>线上10.32.32.69:3306/game</option>
+<option value=3>飞起的沙盒</option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SELECT><br>清缓存管理后台：<SELECT name="htNum">
+<option value=0>http://10.48.25.72:8092/</option>
+<option value=1>士兵乙最强力的beta</option>
+</SELECT><br><strong>筛选条件：</strong><br>游戏id：<input type="text" name="gameid" value="0"> 接口：<SELECT name="jiekouNum">
+<option value=0>请选择接口版本</option>
+<option value=1>走起的a1</option>
+<option value=2>飞起的a2</option>
+<option value=3>暴怒的a3</option>
+</SELECT><br>订单号：<input type="text" name="coid" value=""> 用户名：<input type="text" name="username" value=""> 
+				<input type="button" name="searchResult" value="查询并修改状态" onclick="submitForm()"/> &nbsp;&nbsp;&nbsp; 
+		</div>
+</form>
+
+		<!--账号类型说明-->
+		<h2><font size="3">除了数据库，其他都是选填的（游戏id不填就选0，不要填非int型的）</font></h2><h2><font size="3">订单号及用户名均选填,如全不填则根据订单创建时间选取最新订单</font></h2>筛选太多，所有情况加起来共10种情况太多了，后台只做了如下判断：<br>1.填了订单号，其他填什么都不管<br>2.填了用户名，其他填什么都不管，取该用户名最新创建的订单<br>3.订单号、用户名未填，选了接口<br>4.订单号、用户名未填，选了游戏id<br>5.订单号、用户名未填，选了接口和游戏id<br>6.全部不填，取创建时间最新的成功订单<br><br><h2><br></h2>
+		<p>
+			<table id="tooltable" width="100%" border="1">
+
+
+	</body>
+</html>

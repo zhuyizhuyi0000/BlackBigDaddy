@@ -1,0 +1,178 @@
+<!-- 九鼎客户端登录多部TestCase.xml -->
+<AllTestCases>
+	<StepParametersFilePath>JDClientLoginStepParameters.xml
+	</StepParametersFilePath>
+	<StepAssembly>com.baidu.gameqa.iat.steps.sso.</StepAssembly>
+	<StepGroup>JDClientLogin_QA</StepGroup>
+	
+	<!-- 
+		QA环境九鼎客户端登录多步-case1 
+		我知道这样写很恶心，但是暂时没办法，本来可以封装的更好，但是为了某些指标，你懂的！。。。
+	-->
+	<TestCase ID="JDClientLogin_QACase1" Name="JDClientLogin01">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase1_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase1_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase1_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase1_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case2 -->
+	<TestCase ID="JDClientLogin_QACase2" Name="JDClientLogin02">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase2_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase2_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase2_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase2_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case3 -->
+	<TestCase ID="JDClientLogin_QACase3" Name="JDClientLogin03">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase3_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase3_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase3_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase3_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case4 -->
+	<TestCase ID="JDClientLogin_QACase4" Name="JDClientLogin04">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase4_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase4_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase4_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase4_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case5 -->
+	<TestCase ID="JDClientLogin_QACase5" Name="JDClientLogin05">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase5_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase5_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase5_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase5_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case6 -->
+	<TestCase ID="JDClientLogin_QACase6" Name="JDClientLogin06">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase6_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase6_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase6_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase6_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case7 -->
+	<TestCase ID="JDClientLogin_QACase7" Name="JDClientLogin07">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase7_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase7_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase7_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase7_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case8 -->
+	<TestCase ID="JDClientLogin_QACase8" Name="JDClientLogin08">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase8_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase8_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase8_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase8_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case9 -->
+	<TestCase ID="JDClientLogin_QACase9" Name="JDClientLogin09">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase9_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase9_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase9_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase9_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case10 -->
+	<TestCase ID="JDClientLogin_QACase10" Name="JDClientLogin10">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase10_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase10_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase10_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase10_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case11 -->
+	<TestCase ID="JDClientLogin_QACase11" Name="JDClientLogin11">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase11_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase11_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase11_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase11_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case12 -->
+	<TestCase ID="JDClientLogin_QACase12" Name="JDClientLogin12">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase12_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase12_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase12_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase12_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case13 -->
+	<TestCase ID="JDClientLogin_QACase13" Name="JDClientLogin13">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase13_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase13_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase13_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase13_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case14 -->
+	<TestCase ID="JDClientLogin_QACase14" Name="JDClientLogin14">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase14_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase14_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase14_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase14_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case15 -->
+	<TestCase ID="JDClientLogin_QACase15" Name="JDClientLogin15">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase15_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase15_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase15_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase15_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case16 -->
+	<TestCase ID="JDClientLogin_QACase16" Name="JDClientLogin16">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase16_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase16_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase16_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase16_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case17 -->
+	<TestCase ID="JDClientLogin_QACase17" Name="JDClientLogin17">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase17_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase17_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase17_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase17_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case18 -->
+	<TestCase ID="JDClientLogin_QACase18" Name="JDClientLogin18">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase18_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase18_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase18_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase18_Parameters" />
+	</TestCase>
+	
+	<!-- QA环境九鼎客户端登录多步-case19 -->
+	<TestCase ID="JDClientLogin_QACase19" Name="JDClientLogin19">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase19_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase19_Parameters" />
+		<Step StepName="clientLogin" StepParameterID="JDClientLogin_QACase19_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase19_Parameters" />
+	</TestCase>
+	
+	<!-- 九鼎客户端登录-case20-securityKey参数错误 -->
+	<TestCase ID="JDClientLogin_QACase20" Name="JDClientLogin20">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase20_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase20_Parameters" />
+		<Step StepName="loginWithWrongKey" StepParameterID="JDClientLogin_QACase20_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase20_Parameters" />
+	</TestCase>
+	
+	<!-- 九鼎客户端登录-case21-reqBody参数错误 -->
+	<TestCase ID="JDClientLogin_QACase21" Name="JDClientLogin21">
+		<Step StepName="getDescryString" StepParameterID="JDClientLogin_QACase21_Parameters" />
+		<Step StepName="encryptReqBody" StepParameterID="JDClientLogin_QACase21_Parameters" />
+		<Step StepName="loginWithWrongReqBody" StepParameterID="JDClientLogin_QACase21_Parameters" />
+		<Step StepName="assertResult" StepParameterID="JDClientLogin_QACase21_Parameters" />
+	</TestCase>
+</AllTestCases>

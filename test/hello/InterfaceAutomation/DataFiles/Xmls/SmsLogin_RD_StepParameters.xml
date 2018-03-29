@@ -1,0 +1,114 @@
+<!-- 短信登录获取验证码接口多步测试参数xml -->
+<AllStepParameters>
+
+	<!-- 短信登录获取验证码 -case1 parameters-->
+	<StepParameter ID="SendVcode_Case01_Parameters" Name="sendVCode01">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="api_rd_url" Value="http://10.42.121.90:8050/sso/sms/security/send_vcode.json" />
+			<parameter Key="api_httpmethod" Value="POST" />
+			
+			<parameter Key="phoneNumber" Value="13811084245" />
+			
+			<parameter Key="assertType" Value="contains" />
+			<parameter Key="expectedResult" Value='{"status":0,"needVcode":0,"message":"send sms ok!","body":null}' />
+			<parameter Key="expectedResult_1" Value='{"status":16,"needVcode":0,"message":"反作弊策略登录限制","body":null}' />
+		</Parameters>
+	</StepParameter>
+	
+	<!-- 短信登录获取验证码 -case2- 手机号格式不正确-->
+	<StepParameter ID="SendVcode_Case02_Parameters" Name="sendVCode02">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="api_rd_url" Value="http://10.42.121.90:8050/sso/sms/security/send_vcode.json" />
+			<parameter Key="api_httpmethod" Value="POST" />
+			
+			<parameter Key="phoneNumber" Value="88888888888" />
+			
+			<parameter Key="assertType" Value="contains" />
+			<parameter Key="expectedResult" Value='{"status":1,"needVcode":0,"message":"手机号格式错误","body":null}' />
+		</Parameters>
+	</StepParameter>
+	
+	<!-- 短信登录获取验证码 -case3- 手机号为空-->
+	<StepParameter ID="SendVcode_Case03_Parameters" Name="sendVCode03">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="api_rd_url" Value="http://10.42.121.90:8050/sso/sms/security/send_vcode.json" />
+			<parameter Key="api_httpmethod" Value="POST" />
+			
+			<parameter Key="phoneNumber" Value="" />
+			
+			<parameter Key="assertType" Value="contains" />
+			<parameter Key="expectedResult" Value='{"status":1,"needVcode":0,"message":"手机号格式错误","body":null}' />
+		</Parameters>
+	</StepParameter>
+	
+	<!-- 短信登录获取验证码 -case4- 带clientIp参数-->
+	<StepParameter ID="SendVcode_Case04_Parameters" Name="sendVCode04">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="api_rd_url" Value="http://10.42.121.90:8050/sso/sms/security/send_vcode.json" />
+			<parameter Key="api_httpmethod" Value="POST" />
+			
+			<parameter Key="phoneNumber" Value="13811111111" />
+			<parameter Key="clientIp" Value="192.168.1.1" />
+			
+			<parameter Key="assertType" Value="contains" />
+			<parameter Key="expectedResult" Value='{"status":0,"needVcode":0,"message":"send sms ok!","body":null}' />
+		</Parameters>
+	</StepParameter>
+	
+	<!-- 短信登录获取验证码 -case5- 带非法的clientIp参数-->
+	<StepParameter ID="SendVcode_Case05_Parameters" Name="sendVCode05">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="api_rd_url" Value="http://10.42.121.90:8050/sso/sms/security/send_vcode.json" />
+			<parameter Key="api_httpmethod" Value="POST" />
+			
+			<parameter Key="phoneNumber" Value="13811111111" />
+			<parameter Key="clientIp" Value="abcd" />
+			
+			<parameter Key="assertType" Value="contains" />
+			<parameter Key="expectedResult" Value='{"status":403,"needVcode":0,"message":"访问拒绝，非法IP！","body":null}' />
+		</Parameters>
+	</StepParameter>
+	
+	<!-- 短信登录获取验证码 -case6- clientIp参数为空-->
+	<StepParameter ID="SendVcode_Case06_Parameters" Name="sendVCode06">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="api_rd_url" Value="http://10.42.121.90:8050/sso/sms/security/send_vcode.json" />
+			<parameter Key="api_httpmethod" Value="POST" />
+			
+			<parameter Key="phoneNumber" Value="13811111111" />
+			<parameter Key="clientIp" Value="" />
+			
+			<parameter Key="assertType" Value="contains" />
+			<parameter Key="expectedResult" Value='{"status":0,"needVcode":0,"message":"send sms ok!","body":null}' />
+		</Parameters>
+	</StepParameter>
+	
+	<!-- 短信登录获取验证码 -case7- 带pid参数-->
+	<StepParameter ID="SendVcode_Case07_Parameters" Name="sendVCode07">
+		<ConnectionString>NULL</ConnectionString>
+		<CommandText>NULL</CommandText>
+		<Parameters>
+			<parameter Key="api_rd_url" Value="http://10.42.121.90:8050/sso/sms/security/send_vcode.json" />
+			<parameter Key="api_httpmethod" Value="POST" />
+			
+			<parameter Key="phoneNumber" Value="13811111112" />
+			<parameter Key="clientIp" Value="198.168.1.1" />
+			<parameter Key="pid" Value="123" />
+			
+			<parameter Key="assertType" Value="contains" />
+			<parameter Key="expectedResult" Value='{"status":0,"needVcode":0,"message":"send sms ok!","body":null}' />
+		</Parameters>
+	</StepParameter>
+</AllStepParameters>

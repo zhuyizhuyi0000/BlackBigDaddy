@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+      <class name="com.baidu.gameqa.generation.Member__duanyou"/><!-- pass on 2014.10.14, qixiuping-->
+      <class name="com.baidu.gameqa.generation.Member__sign"/>       <!-- pass on 2014.10.14, wangjing-->
+      <class name="com.baidu.gameqa.generation.MemberSignTestCase"/>  <!-- pass on 2014.10.14,wangjing-->
+      <class name="com.baidu.gameqa.generation.RegisterwithInviteCodeTestCase"/><!-- pass on 2014.10.14,guolin-->
+      <class name="com.baidu.gameqa.generation.Member__store_kind"/><!-- pass on 2014.10.14,zhujinling-->
+      <class name="com.baidu.gameqa.generation.Member__order_queryHistory"/><!-- pass on 2014.10.14,qixiuping-->
+      <class name="com.baidu.gameqa.generation.Member__ajaxAdList"/><!-- pass on 2014.10.14,wangjing-->
+      <class name="com.baidu.gameqa.generation.Member__Task_InviteCode"/><!-- pass on 2014.10.14,guolin-->
+      <class name="com.baidu.gameqa.generation.Member__memberInfo"/>  <!-- pass on 2014.10.14,liyajuan-->
+      <class name="com.baidu.gameqa.generation.Member__ajaxMyGrowthDetail"/> <!-- pass on 2014.10.29,guolin--> 
+      <class name="com.baidu.gameqa.generation.Member__ajaxMyScoreDetail"/> <!-- pass on 2014.10.14,wangjing-->
+      <class name="com.baidu.gameqa.generation.Member__Task_QueryGrowth"/> <!-- pass on 2014.10.14,guolin-->
+      <class name="com.baidu.gameqa.generation.Member__Task_QueryScore"/> <!-- pass on 2014.10.14,guolin-->
+      <class name="com.baidu.gameqa.generation.Member__Task_UploadPortrait"/> <!-- pass on 2014.10.14,guolin-->
+      <class name="com.baidu.gameqa.generation.MemberStorePayTestCase"/><!-- pass on 2014.10.14,qixiuping-->
+      <!-- <class name="com.baidu.gameqa.generation.MemberOrderApplyQuickOrderTestCase"/> --><!-- 切点券后去掉该接口,qixiuping -->
+      <class name="com.baidu.gameqa.generation.Member__lottery"/> <!-- pass on 2014.10.14,zhujinling-->
+      <class name="com.baidu.gameqa.generation.Member__ajaxLotteryProduct"/> <!-- pass on 2014.10.14,zhujinling-->
+      <class name="com.baidu.gameqa.generation.Member__Query_Personal_Score"/>  <!-- pass on 2014.10.17,guolin-->
+      <class name="com.baidu.gameqa.generation.Member__Query_Personal_Growth"/>  <!-- pass on 2014.10.20,guolin-->
+      <class name="com.baidu.gameqa.generation.MemberStoreSaveAddrTestCase"/>  <!-- pass on 2014.10.24,guolin-->
+      <class name="com.baidu.gameqa.generation.MemberLotterySaveAddrTestCase"/>  <!-- pass on 2014.10.24,guolin-->
+      <class name="com.baidu.gameqa.generation.Member__Signin_Records"/>  <!-- pass on 2014.11.03,guolin--> 
+      <class name="com.baidu.gameqa.generation.Member__Store_Activitypay"/>  <!-- pass on 2014.11.12,guolin--> 
+      <class name="com.baidu.gameqa.generation.Member__lottery_ajaxGetPrize"/>  <!-- pass on 2014.11.14,guolin--> 
+    </classes>
+  </test>
+</suite>

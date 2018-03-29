@@ -1,0 +1,27 @@
+<AllTestCases>
+	<StepParametersFilePath>GiftPayCheckParameters.xml
+	</StepParametersFilePath>
+	<StepAssembly>com.baidu.gameqa.iat.steps.gift.</StepAssembly>
+	<StepGroup>GiftPayCheck</StepGroup>
+
+	<TestCase ID="UserLimit_UserBindEmail" Name="bindEmailTestCase">
+		<Step StepName="getParameters" StepParameterID="UserBindEmailPhoneCaseParameters" />
+		<Step StepName="userLogin" StepParameterID="UserBindEmailPhoneCaseParameters" />
+		<Step StepName="giftPayCheck" StepParameterID="UserBindEmailPhoneCaseParameters" />
+		<Step StepName="assertResult" StepParameterID="UserBindEmailPhoneCaseParameters" />
+	</TestCase>
+	
+	<TestCase ID="UserLimit_UserBindPhone" Name="bindPhoneTestCase">
+		<Step StepName="getParameters" StepParameterID="UserBindEmailPhoneCaseParameters" />
+		<Step StepName="userLogin" StepParameterID="UserBindEmailPhoneCaseParameters" />
+		<Step StepName="giftPayCheck" StepParameterID="UserBindEmailPhoneCaseParameters" />
+		<Step StepName="assertResult" StepParameterID="UserBindEmailPhoneCaseParameters" />
+	</TestCase>
+	
+	<TestCase ID="UserLimit_UserNoBindEmail" Name="noBindTestCase">
+		<Step StepName="getParameters" StepParameterID="UserNoBindEmailPhoneCaseParameters" />
+		<Step StepName="userLogin" StepParameterID="UserNoBindEmailPhoneCaseParameters" />
+		<Step StepName="giftPayCheck" StepParameterID="UserNoBindEmailPhoneCaseParameters" />
+		<Step StepName="assertResult" StepParameterID="UserNoBindEmailPhoneCaseParameters" />
+	</TestCase>
+</AllTestCases>

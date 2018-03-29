@@ -1,0 +1,218 @@
+<AllStepParameters>
+    <StepParameter ID="rxzj" Name="goDoubiLoadServer_rxzj" >
+      <ConnectionString>FDFD</ConnectionString>
+			<CommandText>fdsfdsfsd</CommandText>
+      <Parameters>
+      <parameter Key="ratioDesc" Value="10"/>
+      <parameter Key="currencyDesc" Value="元宝"/>
+      <parameter Key="zoneFlag" Value="0"/>
+      <parameter Key="validFlag" Value="1"/>
+      <parameter Key="isFlag" Value="-1"/>
+      <parameter Key="needRole" Value="1"/>
+     </Parameters>
+    </StepParameter>
+    
+     <StepParameter ID="jzsg" Name="goDoubiLoadServer_jzsg" >
+      <ConnectionString>FDFD</ConnectionString>
+			<CommandText>fdsfdsfsd</CommandText>
+      <Parameters>
+      <parameter Key="ratioDesc" Value="10"/>
+      <parameter Key="currencyDesc" Value="黄金"/>
+      <parameter Key="zoneFlag" Value="1"/>
+      <parameter Key="validFlag" Value="1"/>
+      <parameter Key="isFlag" Value="-1"/>
+      <parameter Key="needRole" Value="1"/>
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="ahsj" Name="goDoubiLoadServer_ahsj" >
+      <ConnectionString>FDFD</ConnectionString>
+      <CommandText>fdsfdsfsd</CommandText>
+      <Parameters>
+      <parameter Key="ratioDesc" Value="10"/>
+      <parameter Key="currencyDesc" Value="点券"/>
+      <parameter Key="zoneFlag" Value="0"/>
+      <parameter Key="validFlag" Value="1"/>
+      <parameter Key="isFlag" Value="-1"/>
+      <parameter Key="needRole" Value="1"/>
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="tlgl" Name="goDoubiLoadServer_tlgl" >
+      <ConnectionString>FDFD</ConnectionString>
+      <CommandText>fdsfdsfsd</CommandText>
+      <Parameters>
+      <parameter Key="ratioDesc" Value="100"/>
+      <parameter Key="currencyDesc" Value="元宝"/>
+      <parameter Key="zoneFlag" Value="0"/>
+      <parameter Key="validFlag" Value="1"/>
+      <parameter Key="isFlag" Value="-1"/>
+      <parameter Key="needRole" Value="1"/>
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="GoDoubiQueryUser_vip" Name="GoDoubiQueryUser_vip" >
+      <ConnectionString>jdbc:mysql://10.48.16.43:5506/game</ConnectionString>
+      <CommandText>SELECT sum(balance) FROM `youxi_preferential_card_0` where userid = 441267695 and status = 1</CommandText>
+      <Parameters>
+      <parameter Key="ConnectionString_newyouxi" Value="jdbc:mysql://10.48.16.43:5506/game"/>
+      <parameter Key="CommandText_balance" Value="SELECT sum(balance) FROM `youxi_preferential_card_0` where userid = 441267695 and status = 1"/>
+      <parameter Key="CommandText_vipLevel" Value="SELECT * FROM `youxi_vip_user` where userid = 441267695"/>
+      <parameter Key="CommandText_vipStatus" Value="SELECT count(*) FROM `youxi_vip_user` where userid = 441267695"/>
+      <parameter Key="CommandText_chargeAmount" Value="SELECT sum(amount) FROM `youxi_order_pay_20141` where userid = 441267695 and orderStatus = 1"/>  
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/>  
+      <parameter Key="VIP1_AMOUNT" Value="20100"/>
+     </Parameters>
+    </StepParameter>
+
+    <StepParameter ID="GoDoubiQueryUser_novip" Name="GoDoubiQueryUser_novip" >
+      <ConnectionString>jdbc:mysql://10.48.16.43:5506/game</ConnectionString>
+      <CommandText>SELECT sum(balance) FROM `youxi_preferential_card_0` where userid = 441267695 and status = 1</CommandText>
+      <Parameters>
+      <parameter Key="ConnectionString_newyouxi" Value="jdbc:mysql://10.48.16.43:5506/game"/>
+      <parameter Key="CommandText_balance" Value="SELECT sum(balance) FROM `youxi_preferential_card_0` where userid = 1252081296 and status = 1"/>
+      <parameter Key="CommandText_vipLevel" Value="SELECT * FROM `youxi_vip_user` where userid = 1252081296"/>  
+      <parameter Key="CommandText_vipStatus" Value="SELECT count(*) FROM `youxi_vip_user` where userid = 1252081296"/>
+      <parameter Key="CommandText_chargeAmount" Value="SELECT sum(amount) FROM `youxi_order_pay_20141` where userid = 1252081296 and orderStatus = 1"/>  
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/>  
+      <parameter Key="VIP1_AMOUNT" Value="20100"/>
+     </Parameters>
+    </StepParameter>
+    <StepParameter ID="GoDoubiQueryUser_novip_chong" Name="GoDoubiQueryUser_novip_chong" >
+      <ConnectionString>jdbc:mysql://10.48.16.43:5506/game</ConnectionString>
+      <CommandText>SELECT sum(balance) FROM `youxi_preferential_card_0` where userid = 441267695 and status = 1</CommandText>
+      <Parameters>
+      <parameter Key="ConnectionString_newyouxi" Value="jdbc:mysql://10.48.16.43:5506/game"/>
+      <parameter Key="CommandText_balance" Value="SELECT sum(balance) FROM `youxi_preferential_card_0` where userid = 1252081298 and status = 1"/>
+      <parameter Key="CommandText_vipLevel" Value="SELECT * FROM `youxi_vip_user` where userid = 1252081298"/> 
+      <parameter Key="CommandText_vipStatus" Value="SELECT count(*) FROM `youxi_vip_user` where userid = 1252081298"/> 
+      <parameter Key="CommandText_chargeAmount" Value="SELECT sum(amount) FROM `youxi_order_pay_20141` where userid = 1252081298 and orderStatus = 1"/>  
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/> 
+      <parameter Key="VIP1_AMOUNT" Value="20100"/> 
+     </Parameters>
+    </StepParameter>
+
+    <StepParameter ID="loadgame1" Name="GoDoubi_loadgame" >
+      <ConnectionString>jdbc:mysql://10.48.16.43:5506/game</ConnectionString>
+      <CommandText></CommandText>
+      <Parameters> 
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/> 
+      <parameter Key="CommandText_insert" Value="SELECT sum(balance) FROM `youxi_preferential_card_0` where userid = 1252081298 and status = 1"/>
+      <parameter Key="CommandText_vipLevel" Value="SELECT * FROM `youxi_vip_user` where userid = 1252081298"/> 
+     </Parameters>
+    </StepParameter>
+
+    <StepParameter ID="loadgame" Name="loadgame" >
+      <ConnectionString>jdbc:mysql://10.48.16.43:5506/game</ConnectionString>
+      <CommandText></CommandText>
+      <Parameters> 
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/> 
+      <parameter Key="conn_newyouxi" Value="jdbc:mysql://10.48.16.43:5506/game"/>
+      <parameter Key="conn_tiebayouxi" Value="jdbc:mysql://10.48.16.43:4439/game"/>
+      <parameter Key="conn_bplat" Value="jdbc:mysql://10.48.16.43:4431/game"/>
+			<parameter Key="selectWanbaGame_tieba" Value="SELECT * FROM `wanba_game` where status=50;"/>
+			<parameter Key="selectUserGameRecord_tieba" Value="select distinct c.gameId,c.name from (select a.gameid as gameid,b.name as name  from  user_game_record_27 a , wanba_game b where userid=441264267 and a.gameid=b.id and b.status=50   order BY lastTime desc ) c;"/>
+			<parameter Key="deleteUserGameRecord_tieba" Value="delete from  `user_game_record_27` where userid=441264267 ;"/>
+			<parameter Key="insertUserGameRecord_tieba" Value="INSERT INTO `user_game_record_27` (`id` ,`userId` ,`gameId` ,`serverId` ,`roleName` ,`lastTime` ,`firstTime`)VALUES (NULL , '441264267', '495', '1346', NULL , '2014-05-23 19:41:59', '2014-05-23 19:41:59') ;"/>
+  		<parameter Key="selectrecommendGameList_tieba" Value="SELECT * FROM `wanba_game` WHERE STATUS =50 ORDER BY basescore DESC limit 10;"/>
+			<parameter Key="updateWanbaGameOffline_tieba" Value="update  `wanba_game` set STATUS =40 WHERE id=478;"/>		
+			<parameter Key="updateWanbaGameOnline_tieba" Value="update  `wanba_game` set STATUS =50 WHERE id=478;"/>		
+      <parameter Key="deleteUserYouxiRecord_newyouxi" Value="delete from  `user_youxi_record_67` where userid=441264267 and platFlag=$platFlag;"/> 
+			<parameter Key="insertUserYouxiRecord_newyouxi" Value="INSERT INTO `user_youxi_record_67` (`id` ,`userId` ,`gameId` ,`serverId` ,`roleName` ,`lastTime` ,`firstTime` ,`platFlag`)VALUES (NULL , '441264267', '495', '1346', NULL , '2014-05-23 19:41:59', '2014-05-23 19:41:59', '4');"/>
+			<parameter Key="selectUserYouxiRecord_newyouxi" Value="select * from  `user_youxi_record_67` where userid=441264267 and platFlag= $platFlag GROUP BY gameid order BY gameid;"/>
+			<parameter Key="selectYouxiInfo_newyouxi" Value="SELECT * FROM `youxi_info` where status=50 and plat =$platFlag ;"/>
+			<parameter Key="selectrecommendGameList_newyouxi" Value="SELECT * FROM `youxi_info` WHERE STATUS =50 and plat =$platFlag ORDER BY basescore DESC limit 10;"/>
+			<parameter Key="updateWanbaGameOffline_newyouxi" Value="update  `youxi_info` set STATUS =40 WHERE id=478 and plat =$platFlag ;"/>		
+			<parameter Key="updateWanbaGameOnline_newyouxi" Value="update  `youxi_info` set STATUS =50 WHERE id=478 and plat =$platFlag ;"/>		
+			<parameter Key="selectGamePlayerRecord_bplat" Value="select * from  `game_player_record_4` where userid=44 and gameid=486 group by serverId order BY serverId desc;"/>
+			<parameter Key="deleteGamePlayerRecord_bplat" Value="delete from  `game_player_record_4` where userid=44 ;"/>
+			<parameter Key="insertGamePlayerRecord_bplat" Value="INSERT INTO `game_player_record_4` (`id` ,`userId` ,`gameId` ,`serverId` ,`roleName` ,`lastTime` ,`firstTime`)VALUES (NULL , '44', '486', '37', NULL , '2014-05-23 19:41:59', '2014-05-23 19:41:59') ;"/>
+			<parameter Key="selectYouxiInfo_bplat" Value="SELECT * FROM `youxi_info` where status=50 and plat =$platFlag ;"/>
+			<parameter Key="selectrecommendGameList_bplat" Value="SELECT * FROM `youxi_info` WHERE STATUS =50 and plat =$platFlag ORDER BY basescore DESC limit 10;"/>
+			<parameter Key="updateWanbaGameOffline_bplat" Value="update  `wanba_game` set STATUS =40 WHERE id=478;"/>		
+			<parameter Key="updateWanbaGameOnline_bplat" Value="update  `wanba_game` set STATUS =50 WHERE id=478;"/>		
+			<parameter Key="ratioDesc_tieba" Value="1元=1点券"/>
+			<parameter Key="platDesc_tieba" Value="百度贴吧-以兴趣主题聚合志同道合者的互动平台"/>
+			<parameter Key="platLogo_tieba" Value="http://p2.youxi.bdimg.com/site/v5/images/tiebagamelogo_140_65.png"/>    
+			<parameter Key="ratioDesc_newyouxi" Value="1元=1点券"/>
+			<parameter Key="platDesc_newyouxi" Value="百度游戏-为亿万玩家传递快乐！"/>
+			<parameter Key="platLogo_newyouxi" Value="http://p2.youxi.bdimg.com/site/v5/images/baidugamelogo_140_65.png"/>    
+			<parameter Key="ratioDesc_wanhao123" Value="1元=1点券"/>
+			<parameter Key="platDesc_wanhao123" Value="hao123游戏—健康生活，开心游戏"/>
+			<parameter Key="platLogo_wanhao123" Value="http://p2.youxi.bdimg.com/site/v5/images/hao123gamelogo_140_65.png"/>    
+			<parameter Key="ratioDesc_hao123qipai" Value="1元=1点券"/>
+			<parameter Key="platDesc_hao123qipai" Value="hao123游戏—健康生活，开心游戏"/>
+			<parameter Key="platLogo_hao123qipai" Value="http://p2.youxi.bdimg.com/site/v5/images/hao123gamelogo_140_65.png"/>    
+			<parameter Key="ratioDesc_bplat" Value="1元=1点券"/>
+			<parameter Key="platDesc_bplat" Value="百度旗下精品页游平台"/>
+			<parameter Key="platLogo_bplat" Value="http://game.skycn.com/youyanglogo_140_65.png"/>    
+			<parameter Key="ratioDesc_chuanqi" Value="1元=1点券"/>
+			<parameter Key="platDesc_chuanqi" Value="百度游戏-为亿万玩家传递快乐！"/>
+			<parameter Key="platLogo_chuanqi" Value="http://p2.youxi.bdimg.com/site/v5/images/baidugamelogo_140_65.png"/>    
+			
+     </Parameters>
+    </StepParameter>
+
+    <StepParameter ID="loadserver" Name="loadserver" >
+      <ConnectionString>jdbc:mysql://10.48.16.43:5506/game</ConnectionString>
+      <CommandText></CommandText>
+      <Parameters> 
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/> 
+      <parameter Key="conn_newyouxi" Value="jdbc:mysql://10.48.16.43:5506/game"/>
+      <parameter Key="conn_tiebayouxi" Value="jdbc:mysql://10.48.16.43:4439/game"/>
+      <parameter Key="conn_bplat" Value="jdbc:mysql://10.48.16.43:4431/game"/>
+      <parameter Key="selectgameCurrencyInfo" Value="SELECT * FROM `game_currency_info` where gameid=478 ;"/>
+      <parameter Key="selectYouxiInfo_newyouxi" Value="SELECT * FROM `youxi_info` where id=478 and plat = $platFlag;"/>
+      <parameter Key="selectYouxiInfo_tieba" Value="SELECT * FROM `wanba_game` where id=478 ;"/>
+      <parameter Key="selectYouxiInfo_bplat" Value="SELECT * FROM `wanba_game` where id=478 ;"/>
+      <parameter Key="selectYouxiServerInfo_newyouxi" Value="SELECT * FROM `youxi_server_info` where gameid=478 and status &gt;=10 and status &lt;50 and plat = $platFlag order by effectTime desc;"/>
+      <parameter Key="selectYouxiServerInfo_tieba" Value="SELECT * FROM `game_server_info` where gameid=478 and status = 10 order by effectTime desc;"/>
+      <parameter Key="selectYouxiServerInfo_bplat" Value="SELECT * FROM `game_server_info` where gameid=478 and status = 10 order by effectTime desc;"/>
+			<parameter Key="selectUserYouxiRecord_newyouxi" Value="select * from  `user_youxi_record_67` where userid=441264267 and platFlag= $platFlag and gameid=478 group by serverId order BY serverId desc;"/>
+			<parameter Key="selectGamePlayerRecord_bplat" Value="select * from  `game_player_record_4` where userid=44 and gameid=486 group by serverId order BY serverId desc;"/>
+			<parameter Key="selectUserGameRecord_tieba" Value="select * from  `user_game_record_27` where userid=441264267 and gameid=478 group by serverId order BY serverId desc;"/>
+      <parameter Key="gamePage" Value="http://p2.youxi.bdimg.com/site/images/game-icons/228x157/478.png"/>
+      <parameter Key="game_jzsg" Value=""/>
+      </Parameters>
+    </StepParameter>
+      
+    <StepParameter ID="historyorder1" Name="query_myhistory_order" >
+      <ConnectionString>jdbc:mysql://10.48.16.43:5506/game</ConnectionString>
+      <CommandText>SELECT * FROM `youxi_order_pay_20141` where userid = 1200000076 and  `platFlag`= 1 and createTime Between '2014-04-01 00:00:00' and '2014-05-01 00:00:00'order by createTime DESC</CommandText>
+      <Parameters> 
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/> 
+      <parameter Key="nostartTime" Value="SELECT * FROM `youxi_order_pay_20141` where userid = 1200000076 and  `platFlag`= 1 and createTime &lt;= '2014-05-01 00:00:00'order by createTime DESC"/> 
+      <parameter Key="noendTime" Value="SELECT * FROM `youxi_order_pay_20141` where userid = 1200000076 and  `platFlag`= 1 and createTime &gt;= '2014-04-01 00:00:00'order by createTime DESC"/> 
+      <parameter Key="noTime" Value="SELECT * FROM `youxi_order_pay_20141` where userid = 1200000076 and  `platFlag`= 1 order by createTime DESC"/> 
+     </Parameters>
+    </StepParameter>
+	
+   <StepParameter ID="query_getpre1" Name="query_getpre" >
+     <ConnectionString>jdbc:mysql://10.48.16.43:5506/game</ConnectionString>
+     <CommandText>SELECT sum(balance) FROM `youxi_preferential_card_0` WHERE userid =1252081077 and status = 1 and expireTime> now()</CommandText>
+     <Parameters>
+     <parameter Key="ConnectionString_newyouxi" Value="jdbc:mysql://10.48.16.43:5506/game"/>
+     <parameter Key="CommandText_balance" Value="SELECT sum(balance) FROM `youxi_preferential_card_0` WHERE userid =1252081077 and expireTime &gt; now()"/> 
+     <parameter Key="CommandText_expireBalance" Value="SELECT sum(balance) FROM `youxi_preferential_card_0` WHERE userid =1252081077  and expireTime between now() and date_add(now(),interval 7 day)"/> 
+     <parameter Key="user" Value="game"/>
+     <parameter Key="password" Value="game"/> 
+     </Parameters>
+   </StepParameter>
+
+	 <StepParameter ID="query_mypre1" Name="query_getpre" >
+      <ConnectionString>jdbc:mysql://10.48.16.43:5506/game</ConnectionString>
+      <CommandText>select * from youxi_preferential_card_0  where userName='nancy_ztw' </CommandText>
+      <Parameters>  
+      <parameter Key="user" Value="game"/>
+      <parameter Key="password" Value="game"/>  
+      <parameter Key="CommandText_outtime_amount" Value="SELECT sum(balance) as amount FROM `youxi_preferential_card_0` WHERE userid =276532283 and status=1 and expireTime &lt;= now()"/> 
+      <parameter Key="CommandText_total_amount" Value="SELECT sum(amount) as amount FROM `youxi_preferential_card_0` WHERE userid =276532283 and status=1 "/> 
+      <parameter Key="CommandText_amount" Value="SELECT sum(balance) as amount FROM `youxi_preferential_card_0` WHERE userid =276532283 and status=1 and expireTime &gt;= now()"/> 
+      <parameter Key="CommandText_wd_amount" Value="SELECT sum(balance) as amount FROM `youxi_preferential_card_0` WHERE userid =276532283 and status=1 and expireTime between now() and date_add(now(),interval 7 day)"/> 
+      </Parameters>
+   </StepParameter>
+</AllStepParameters>
